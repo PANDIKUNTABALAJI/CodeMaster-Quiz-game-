@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ CONTEST - Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Add decorative waves */
+        body::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 15vh;
+            background: rgba(255, 255, 255, 0.1);
+            clip-path: polygon(0 50%, 100% 20%, 100% 100%, 0% 100%);
+            z-index: -1;
+        }
+
+        /* Bubble Animation */
+        .bubbles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: rise 10s infinite ease-in;
+        }
+
+        .bubble:nth-child(1) {
+            width: 40px;
+            height: 40px;
+            left: 10%;
+            animation-duration: 8s;
+        }
+
+        .bubble:nth-child(2) {
+            width: 20px;
+            height: 20px;
+            left: 20%;
+            animation-duration: 5s;
+            animation-delay: 1s;
+        }
+
+        .bubble:nth-child(3) {
+            width: 50px;
+            height: 50px;
+            left: 35%;
+            animation-duration: 7s;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(4) {
+            width: 80px;
+            height: 80px;
+            left: 50%;
+            animation-duration: 11s;
+            animation-delay: 0s;
+        }
+
+        .bubble:nth-child(5) {
+            width: 35px;
+            height: 35px;
+            left: 55%;
+            animation-duration: 6s;
+            animation-delay: 1s;
+        }
+
+        .bubble:nth-child(6) {
+            width: 45px;
+            height: 45px;
+            left: 65%;
+            animation-duration: 8s;
+            animation-delay: 3s;
+        }
+
+        .bubble:nth-child(7) {
+            width: 90px;
+            height: 90px;
+            left: 70%;
+            animation-duration: 12s;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(8) {
+            width: 25px;
+            height: 25px;
+            left: 80%;
+            animation-duration: 6s;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(9) {
+            width: 15px;
+            height: 15px;
+            left: 90%;
+            animation-duration: 9s;
+            animation-delay: 4s;
+        }
+
+        .bubble:nth-child(10) {
+            width: 50px;
+            height: 50px;
+            left: 25%;
+            animation-duration: 10s;
+            animation-delay: 4s;
+        }
+
+        @keyframes rise {
+            0% {
+                bottom: -100px;
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(100px);
+            }
+            100% {
+                bottom: 1080px;
+                transform: translateX(-200px);
+            }
+        }
+
+        .register-box {
+            width: 100%;
+            max-width: 400px;
+            background-color: rgba(255, 255, 255, 0.2);
+            /* Fallback for browsers that don't support backdrop-filter */
+            background-color: rgba(31, 200, 219, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* For Safari */
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: scale(0.9);
+            opacity: 0;
+            animation: scaleIn 1s forwards;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Animated Border */
+        .register-box::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
+            z-index: -1;
+            border-radius: 20px;
+            animation: borderAnimation 6s linear infinite;
+        }
+
+        @keyframes borderAnimation {
+            0% {
+                filter: hue-rotate(0deg) blur(2px);
+            }
+            100% {
+                filter: hue-rotate(360deg) blur(2px);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .register-box h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: white;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .form-group {
+            width: 100%;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            padding-left: 45px;
+        }
+
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-group input:focus {
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Input icon styles - more cross-browser compatible */
+        .form-group::before {
+            position: absolute;
+            left: 15px;
+            top: 39px;
+            color: white;
+            z-index: 1;
+            font-size: 18px;
+        }
+
+        /* Using more reliable icon method */
+        .username-icon::before {
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E");
+            width: 20px;
+            height: 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .email-icon::before {
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E");
+            width: 20px;
+            height: 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .password-icon::before {
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z'/%3E%3C/svg%3E");
+            width: 20px;
+            height: 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .error-message {
+            color: #ff6b6b;
+            font-size: 14px;
+            margin-top: 5px;
+            text-align: left;
+            display: none;
+            padding-left: 15px;
+        }
+
+        /* Enhanced Button Styles */
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(45deg, #FF4500, #FF8C00, #FFD700);
+            background-size: 200% 200%;
+            animation: gradientBG 3s ease infinite;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 6px 15px rgba(255, 69, 0, 0.4);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 69, 0, 0.5);
+            letter-spacing: 3px;
+        }
+
+        button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(255, 69, 0, 0.4);
+        }
+
+        /* Button glow effect */
+        button::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            z-index: -1;
+            background: linear-gradient(45deg, #FF4500, #FF8C00, #FFD700);
+            background-size: 400% 400%;
+            border-radius: 40px;
+            animation: glowing 3s ease-in-out infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        button:hover::before {
+            opacity: 0.7;
+        }
+
+        @keyframes glowing {
+            0% {
+                background-position: 0% 50%;
+                filter: blur(5px);
+            }
+            50% {
+                background-position: 100% 50%;
+                filter: blur(10px);
+            }
+            100% {
+                background-position: 0% 50%;
+                filter: blur(5px);
+            }
+        }
+
+        /* Button ripple effect */
+        button::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.7) 10%, transparent 10.01%);
+            background-repeat: no-repeat;
+            background-position: 50%;
+            transform: scale(10, 10);
+            opacity: 0;
+            transition: transform 0.5s, opacity 1s;
+        }
+
+        button:active::after {
+            transform: scale(0, 0);
+            opacity: 0.3;
+            transition: 0s;
+        }
+
+        .login-link {
+            margin-top: 20px;
+            color: white;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .login-link a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Enhanced Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+            overflow: hidden;
+            transform: scale(0.8);
+            opacity: 0;
+            animation: modalOpen 0.5s forwards;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes modalOpen {
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #FF4500, #FFD700);
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FF4500, #FFD700);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
+        }
+
+        .success-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: none;
+            stroke: white;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .modal-content h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .modal-content p {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #0fb8ad;
+            opacity: 0;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                opacity: 1;
+                top: -10px;
+                transform: translateX(0) rotate(0deg);
+            }
+            100% {
+                opacity: 0;
+                top: 400px;
+                transform: translateX(100px) rotate(360deg);
+            }
+        }
+
+        .modal-content button {
+            display: inline-block;
+            width: auto;
+            min-width: 150px;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #FF4500, #FF8C00, #FFD700);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+        }
+
+        .modal-content button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 69, 0, 0.5);
+        }
+
+        /* Loader Style */
+        .loader {
+            display: none;
+            width: 40px;
+            height: 40px;
+            margin: 10px auto;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #FF4500;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Bubble Animation -->
+    <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <div class="register-box">
+        <h1>REGISTER</h1>
+        <form id="registerForm">
+            <div class="form-group username-icon">
+                <label for="username">USERNAME</label>
+                <input type="text" id="username" required>
+                <div id="usernameError" class="error-message"></div>
+            </div>
+            
+            <div class="form-group email-icon">
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" required>
+                <div id="emailError" class="error-message"></div>
+            </div>
+            
+            <div class="form-group password-icon">
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" required>
+                <div id="passwordError" class="error-message"></div>
+            </div>
+            
+            <div class="form-group password-icon">
+                <label for="confirmPassword">CONFIRM PASSWORD</label>
+                <input type="password" id="confirmPassword" required>
+                <div id="confirmPasswordError" class="error-message"></div>
+            </div>
+            
+            <button type="button" id="registerButton">Register</button>
+            <div class="loader" id="registerLoader"></div>
+        </form>
+        
+        <div class="login-link">
+            <p>Already have an account? <a href="index.html">Login</a></p>
+        </div>
+    </div>
+
+    <!-- Enhanced Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">
+                <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h2>Registration Successful!</h2>
+            <p>Your account has been created successfully. A confirmation email has been sent to your inbox. Welcome to CODE MASTER QUIZ!</p>
+            <button onclick="closeModal()">Continue to Login</button>
+        </div>
+    </div>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
+        import { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+        
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAyT7nQnzdkvPE-bAHpg82P7b6NcRo6SiU",
+            authDomain: "quiz-app-fbe0b.firebaseapp.com",
+            projectId: "quiz-app-fbe0b",
+            storageBucket: "quiz-app-fbe0b.appspot.com",
+            messagingSenderId: "52885787188",
+            appId: "1:52885787188:web:b59f2b9515beb5b1a43061",
+            measurementId: "G-5DEX21G9B3"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth();
+        const db = getFirestore(app);
+
+        // Initialize EmailJS
+        (function() {
+            // Your EmailJS public key
+            emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
+        })();
+
+        // Clear error messages
+        function clearErrors() {
+            const errorElements = document.querySelectorAll('.error-message');
+            errorElements.forEach(element => {
+                element.style.display = 'none';
+                element.textContent = '';
+            });
+        }
+
+        // Show error message
+        function showError(elementId, message) {
+            const errorElement = document.getElementById(elementId);
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+        }
+        
+        // Register functionality 
+        document.getElementById('registerButton').addEventListener('click', async function() {
+            clearErrors();
+            
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            // Validate fields
+            if (!username) {
+                showError('usernameError', 'Please enter a username');
+                return;
+            }
+            
+            if (!email) {
+                showError('emailError', 'Please enter your email');
+                return;
+            }
+            
+            if (!password) {
+                showError('passwordError', 'Please enter a password');
+                return;
+            }
+            
+            if (!confirmPassword) {
+                showError('confirmPasswordError', 'Please confirm your password');
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                showError('confirmPasswordError', 'Passwords do not match');
+                return;
+            }
+            
+            if (password.length < 6) {
+                showError('passwordError', 'Password must be at least 6 characters long');
+                return;
+            }
+            
+            // Show loader
+            document.getElementById('registerLoader').style.display = 'block';
+            document.getElementById('registerButton').disabled = true;
+            
+            try {
+                // Create new user with Firebase
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                
+                // Update user profile with the username
+                await updateProfile(userCredential.user, {
+                    displayName: username
+                });
+                
+                // Send email verification
+                await sendEmailVerification(userCredential.user);
+                
+                // Save user data in Firestore
+                try {
+                    await addDoc(collection(db, "users"), {
+                        uid: userCredential.user.uid,
+                        username: username,
+                        email: email,
+                        createdAt: new Date(),
+                        quizzesTaken: 0,
+                        totalScore: 0
+                    });
+                } catch (e) {
+                    console.error("Error adding document: ", e);
+                }
+                
+                // Save additional user info in localStorage if needed
+                let users = [];
+                try {
+                    users = JSON.parse(localStorage.getItem('quizMasterUsers')) || [];
+                } catch (e) {
+                    console.error("Error parsing users from localStorage:", e);
+                    users = [];
+                }
+                
+                users.push({
+                    uid: userCredential.user.uid,
+                    username: username,
+                    email: email
+                });
+                
+                localStorage.setItem('quizMasterUsers', JSON.stringify(users));
+                
+                // Send welcome email using EmailJS or similar service
+                sendWelcomeEmail(username, email);
+                
+                // Hide loader
+                document.getElementById('registerLoader').style.display = 'none';
+                
+                // Show success modal
+                document.getElementById('successModal').style.display = 'flex';
+                createConfetti();
+            } catch (error) {
+                // Hide loader
+                document.getElementById('registerLoader').style.display = 'none';
+                document.getElementById('registerButton').disabled = false;
+                
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                
+                if (errorCode === 'auth/email-already-in-use') {
+                    showError('emailError', 'Email already in use');
+                } else if (errorCode === 'auth/invalid-email') {
+                    showError('emailError', 'Invalid email format');
+                } else if (errorCode === 'auth/weak-password') {
+                    showError('passwordError', 'Password is too weak');
+                } else {
+                    showError('emailError', errorMessage);
+                }
+            }
+        });
+
+        // Function to send welcome email (using EmailJS)
+        function sendWelcomeEmail(username, email) {
+            // Using EmailJS service - you would need to sign up at emailjs.com and replace with your service details
+            const serviceID = 'service_0pni3fm';
+            const templateID = 'template_rs21j8n';
+            
+            // Prepare template parameters
+            const templateParams = {
+                to_name: username,
+                to_email: email,
+                subject: 'Welcome to Code Master Quiz!',
+                message: `
+                    Dear ${username},
+                    
+                    Welcome to Code Master Quiz!
+                    
+                    Your registration was successful. Get ready to challenge your knowledge and compete with quiz enthusiasts from around the world!
+                    
+                    Here's what you can do next:
+                    • Log in to your account
+                    • Explore quiz categories
+                    • Test your skills with varying difficulty levels
+                    • Track your progress on the leaderboard
+                    • Earn badges and achievements
+                    
+                    Happy quizzing!
+                    
+                    Best regards,
+                    The Code Master Quiz Team
+                `
+            };
+
+            // Send email using EmailJS
+            emailjs.send(serviceID, templateID, templateParams)
+                .then((response) => {
+                    console.log('Email sent successfully!', response.status, response.text);
+                })
+                .catch((error) => {
+                    console.error('Failed to send email:', error);
+                    // Email failed but registration succeeded, so we still proceed
+                });
+        }
+    </script>
+    <script>
+    // Register functionality 
+    document.getElementById('registerButton').addEventListener('click', async function () {
+        clearErrors();
+
+        const username = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+
+        // Validate fields
+        if (!username) return showError('usernameError', 'Please enter a username');
+        if (!email) return showError('emailError', 'Please enter your email');
+        if (!password) return showError('passwordError', 'Please enter a password');
+        if (!confirmPassword) return showError('confirmPasswordError', 'Please confirm your password');
+        if (password !== confirmPassword) return showError('confirmPasswordError', 'Passwords do not match');
+        if (password.length < 6) return showError('passwordError', 'Password must be at least 6 characters long');
+
+        // Show loader
+        document.getElementById('registerLoader').style.display = 'block';
+        document.getElementById('registerButton').disabled = true;
+
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+
+            await updateProfile(userCredential.user, { displayName: username });
+            await sendEmailVerification(userCredential.user);
+
+            await addDoc(collection(db, "users"), {
+                uid: userCredential.user.uid,
+                username: username,
+                email: email,
+                createdAt: new Date(),
+                quizzesTaken: 0,
+                totalScore: 0
+            });
+
+            let users = [];
+            try {
+                users = JSON.parse(localStorage.getItem('quizMasterUsers')) || [];
+            } catch (e) {
+                console.error("Error parsing users from localStorage:", e);
+                users = [];
+            }
+
+            users.push({ uid: userCredential.user.uid, username, email });
+            localStorage.setItem('quizMasterUsers', JSON.stringify(users));
+
+            sendWelcomeEmail(username, email);
+
+            document.getElementById('registerLoader').style.display = 'none';
+            document.getElementById('successModal').style.display = 'flex';
+            createConfetti();
+        } catch (error) {
+            document.getElementById('registerLoader').style.display = 'none';
+            document.getElementById('registerButton').disabled = false;
+
+            const errorCode = error.code;
+            if (errorCode === 'auth/email-already-in-use') {
+                showError('emailError', 'Email already in use');
+            } else if (errorCode === 'auth/invalid-email') {
+                showError('emailError', 'Invalid email format');
+            } else if (errorCode === 'auth/weak-password') {
+                showError('passwordError', 'Password is too weak');
+            } else {
+                showError('emailError', error.message);
+            }
+        }
+    });
+
+    function sendWelcomeEmail(username, email) {
+        const serviceID = 'YOUR_EMAILJS_SERVICE_ID';
+        const templateID = 'YOUR_EMAILJS_TEMPLATE_ID';
+        const userID = 'YOUR_EMAILJS_USER_ID';
+
+        const templateParams = {
+            to_name: username,
+            to_email: email,
+            subject: 'Welcome to Code Master Quiz!',
+            message: `
+                Hello ${username}!
+
+                Thank you for registering with Code Master Quiz! 
+                Your account has been successfully created.
+
+                Here's what you can do next:
+                - Log in to your account
+                - Browse quiz categories
+                - Challenge yourself with difficulty levels
+                - Compete on the leaderboard
+
+                Happy quizzing!
+                - Code Master Quiz Team
+            `
+        };
+
+        // Uncomment when ready
+        /*
+        emailjs.send(serviceID, templateID, templateParams, userID)
+            .then(res => console.log('Email sent!', res))
+            .catch(err => console.error('Email failed:', err));
+        */
+
+        console.log('Email would be sent with:', templateParams);
+    }
+
+    function closeModal() {
+        document.getElementById('successModal').style.display = 'none';
+        window.location.href = 'index.html'; // Redirect to login
+    }
+
+    function createConfetti() {
+        const colors = ['#FF4500', '#FF8C00', '#FFD700', '#ffffff', '#FFA07A'];
+        const container = document.body;
+
+        for (let i = 0; i < 50; i++) {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.width = Math.random() * 10 + 5 + 'px';
+            confetti.style.height = Math.random() * 10 + 5 + 'px';
+            confetti.style.position = 'absolute';
+            confetti.style.top = '-10px';
+            confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+            confetti.style.animation = 'confetti-fall ' + (Math.random() * 3 + 2) + 's linear forwards';
+
+            container.appendChild(confetti);
+
+            setTimeout(() => {
+                confetti.remove();
+            }, 5000);
+        }
+    }
+</script>
+</body>
+</html>

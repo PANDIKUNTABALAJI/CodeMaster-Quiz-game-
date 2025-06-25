@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QUIZ CONTEST - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset and Typography */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background: linear-gradient(135deg, #05b9c7, #036575);
+        background-size: 400% 400%;
+        animation: gradientBG 10s ease infinite;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #333;
+        padding: 20px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Animated Header */
+    .animated-header {
+        position: absolute;
+        top: 40px;
+        text-align: center;
+        z-index: 10;
+        width: 100%;
+    }
+
+    .animated-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+        color: #00ffff; /* Cyan color for the entire title */
+        text-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+        letter-spacing: 3px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .animated-title .word {
+        display: inline-flex;
+        animation: wordBounce 4s ease-in-out;
+        animation-iteration-count: 2;  /* Only twice */
+        color: #00ffff; /* Ensuring all words are cyan */
+    }
+
+    @keyframes wordBounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        25% {
+            transform: translateY(-15px) scale(1.1);
+            color: #00ffff;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.9);
+        }
+        50% {
+            transform: translateY(0);
+        }
+        75% {
+            transform: translateY(-10px) scale(1.05);
+            color: #00ffff;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+        }
+    }
+
+    /* Background Elements */
+    .background-shapes {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .background-shape {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+    }
+
+    .shape1 {
+        width: 300px;
+        height: 300px;
+        top: -150px;
+        left: 10%;
+    }
+
+    .shape2 {
+        width: 200px;
+        height: 200px;
+        bottom: -50px;
+        right: 20%;
+    }
+
+    .shape3 {
+        width: 150px;
+        height: 150px;
+        bottom: 30%;
+        left: 5%;
+    }
+
+    .mountains {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background: rgba(3, 58, 67, 0.5);
+        clip-path: polygon(0% 100%, 5% 90%, 10% 100%, 15% 90%, 20% 100%, 25% 85%, 30% 100%, 35% 95%, 40% 100%, 45% 80%, 50% 100%, 55% 75%, 60% 100%, 65% 85%, 70% 100%, 75% 90%, 80% 100%, 85% 85%, 90% 100%, 95% 90%, 100% 100%);
+    }
+
+    .grass {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        z-index: 1;
+    }
+
+    .grass-blade {
+        position: absolute;
+        bottom: 0;
+        width: 10px;
+        background: rgba(0, 60, 69, 0.8);
+        border-radius: 50% 50% 0 0;
+    }
+
+    /* Animated Gradient Background */
+    @keyframes gradientBG {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    /* Login Box Styling */
+    .login-box {
+        margin-top: 120px;
+        width: 100%;
+        max-width: 400px;
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0.9);
+        opacity: 0;
+        animation: scaleIn 1s forwards;
+        color: white;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    @keyframes scaleIn {
+        from {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .login-box h1 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: white;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 15px 15px 15px 45px;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .form-group input::placeholder {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .form-group input:focus {
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .input-icon {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .remember-forgot {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        color: white;
+        font-size: 0.9rem;
+    }
+
+    .remember-me {
+        display: flex;
+        align-items: center;
+    }
+
+    .remember-me input {
+        margin-right: 5px;
+    }
+
+    .forgot-password {
+        color: white;
+        text-decoration: none;
+    }
+
+    .forgot-password:hover {
+        text-decoration: underline;
+    }
+
+    .login-box button {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        background: #00d4e0;
+        color: #036575;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+        font-weight: 600;
+    }
+
+    .login-box button:hover {
+        background: #05e6f3;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(5, 230, 243, 0.4);
+    }
+
+    .login-box button:active {
+        transform: translateY(1px);
+    }
+
+    .register-link {
+        margin-top: 20px;
+        color: #fff;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .register-link a {
+        color: #00d4e0;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .register-link a:hover {
+        text-decoration: underline;
+    }
+
+    /* Success Modal Styling */
+    .success-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .success-modal.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal-content {
+        background: linear-gradient(135deg, #05b9c7, #036575);
+        border-radius: 15px;
+        padding: 30px;
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transform: scale(0.7);
+        transition: transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .success-modal.active .modal-content {
+        transform: scale(1);
+    }
+
+    .checkmark-circle {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+        }
+        70% {
+            box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        }
+    }
+
+    .checkmark {
+        color: #fff;
+        font-size: 40px;
+        animation: scaleCheckmark 0.5s ease-in-out;
+    }
+
+    @keyframes scaleCheckmark {
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .success-title {
+        color: white;
+        font-size: 24px;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .success-message {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .modal-btn {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+
+    .modal-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+    }
+
+    /* Confetti Animation */
+    .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        opacity: 0.7;
+        position: absolute;
+        top: -10px;
+        animation: confetti-fall linear forwards;
+    }
+
+    @keyframes confetti-fall {
+        to {
+            transform: translateY(100vh) rotate(360deg);
+        }
+    }
+
+    /* Reset Password Form Styling */
+    #resetPasswordForm {
+        width: 100%;
+        display: none;
+    }
+
+    .back-to-login {
+        display: inline-block;
+        margin-top: 15px;
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .back-to-login:hover {
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="animated-header">
+    <h2 class="animated-title" id="animatedTitle"></h2>
+  </div>
+
+  <div class="background-shapes">
+    <div class="background-shape shape1"></div>
+    <div class="background-shape shape2"></div>
+    <div class="background-shape shape3"></div>
+    <div class="mountains"></div>
+    <div class="grass" id="grass"></div>
+  </div>
+
+  <div class="login-box">
+    <h1 id="formTitle">Login</h1>
+    
+    <!-- Login Form -->
+    <form id="loginForm">
+      <div class="form-group">
+        <span class="input-icon">📧</span>
+        <input type="email" id="email" placeholder="Email" required />
+      </div>
+      <div class="form-group">
+        <span class="input-icon">🔒</span>
+        <input type="password" id="password" placeholder="Password" required />
+      </div>
+      <div class="remember-forgot">
+        <label class="remember-me">
+          <input type="checkbox" id="remember"> Remember me
+        </label>
+        <a href="#" id="forgotPasswordLink" class="forgot-password">Forgot password?</a>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Reset Password Form -->
+    <form id="resetPasswordForm">
+      <div class="form-group">
+        <span class="input-icon">📧</span>
+        <input type="email" id="resetEmail" placeholder="Enter your email" required />
+      </div>
+      <button type="submit">Reset Password</button>
+      <div style="text-align: center; margin-top: 15px;">
+        <a href="#" id="backToLoginLink" class="back-to-login">Back to Login</a>
+      </div>
+    </form>
+
+    <div class="register-link">
+      <p>Don't have an account? <a href="register.html">Register</a></p>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div id="successModal" class="success-modal">
+    <div class="modal-content">
+      <div class="checkmark-circle">
+        <span class="checkmark">✓</span>
+      </div>
+      <h2 class="success-title" id="modalTitle">Login Successful!</h2>
+      <p class="success-message" id="modalMessage">Welcome back! You're being redirected to the QUIZ GAME.</p>
+      <button class="modal-btn" id="modalButton">Continue</button>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script type="module">
+    // Import Firebase SDK modules
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { 
+      getAuth, 
+      signInWithEmailAndPassword, 
+      sendPasswordResetEmail,
+      onAuthStateChanged
+    } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+
+    // Your Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAyT7nQnzdkvPE-bAHpg82P7b6NcRo6SiU",
+      authDomain: "quiz-app-fbe0b.firebaseapp.com",
+      projectId: "quiz-app-fbe0b",
+      storageBucket: "quiz-app-fbe0b.appspot.com",
+      messagingSenderId: "52885787188",
+      appId: "1:52885787188:web:b59f2b9515beb5b1a43061",
+      measurementId: "G-5DEX21G9B3"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // DOM elements
+    const loginForm = document.getElementById("loginForm");
+    const resetPasswordForm = document.getElementById("resetPasswordForm");
+    const forgotPasswordLink = document.getElementById("forgotPasswordLink");
+    const backToLoginLink = document.getElementById("backToLoginLink");
+    const formTitle = document.getElementById("formTitle");
+    const successModal = document.getElementById("successModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalMessage = document.getElementById("modalMessage");
+    const modalButton = document.getElementById("modalButton");
+
+    // Animated title setup - animate words with gap
+    const animateTitle = () => {
+      const title = document.getElementById("animatedTitle");
+      const text = "!...Welcome To The CodeMaster Quiz...!";
+      
+      // Since we want it as one word, we're not splitting by spaces anymore
+      const wordSpan = document.createElement('span');
+      wordSpan.className = 'word';
+      wordSpan.textContent = text;
+      title.appendChild(wordSpan);
+    };
+    
+    // Run animation setup when DOM is loaded
+    document.addEventListener('DOMContentLoaded', animateTitle);
+
+    // Check if user is already logged in
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, redirect to game page
+        console.log("User is already logged in:", user.email);
+        // Uncomment the next line to automatically redirect
+        // window.location.href = "game.html";
+      }
+    });
+
+    // Create grass blades for background animation
+    const grass = document.getElementById('grass');
+    for (let i = 0; i < 100; i++) {
+      const blade = document.createElement('div');
+      blade.className = 'grass-blade';
+      blade.style.left = Math.random() * 100 + '%';
+      blade.style.height = Math.random() * 20 + 20 + 'px';
+      blade.style.width = Math.random() * 3 + 2 + 'px';
+      grass.appendChild(blade);
+    }
+
+    // Handle login form submission
+    loginForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const remember = document.getElementById("remember").checked;
+
+      try {
+        // Sign in with email and password
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+        console.log("User signed in:", user.email);
+        
+        // Show success modal
+        showSuccessModal("Login Successful!", "Welcome back! You're being redirected to the QUIZ GAME.", "Continue", redirectToGame);
+      } catch (error) {
+        // Handle errors
+        console.error("Login error:", error);
+        let errorMessage = "Login failed: " + error.message;
+        
+        // Provide more user-friendly error messages
+        if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
+          errorMessage = "Invalid email or password. Please try again.";
+        } else if (error.code === 'auth/too-many-requests') {
+          errorMessage = "Too many failed login attempts. Please try again later or reset your password.";
+        }
+        
+        alert(errorMessage);
+      }
+    });
+
+    // Handle password reset form submission
+    resetPasswordForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      
+      const email = document.getElementById("resetEmail").value;
+      
+      try {
+        // Send password reset email
+        await sendPasswordResetEmail(auth, email);
+        console.log("Password reset email sent to:", email);
+        
+        // Show success modal
+        showSuccessModal(
+          "Reset Email Sent!", 
+          "Check your email for a link to reset your password.", 
+          "Back to Login", 
+          function() {
+            // Hide modal first
+            successModal.classList.remove("active");
+            
+            // Wait for modal animation to complete before showing login form
+            setTimeout(() => {
+              showLoginForm();
+            }, 300);
+          }
+        );
+      } catch (error) {
+        console.error("Password reset error:", error);
+        let errorMessage = "Password reset failed: " + error.message;
+        
+        // Provide more user-friendly error messages
+        if (error.code === 'auth/user-not-found') {
+          errorMessage = "No account found with this email address.";
+        } else if (error.code === 'auth/invalid-email') {
+          errorMessage = "Please enter a valid email address.";
+        }
+        
+        alert(errorMessage);
+      }
+    });
+
+    // Show forgot password form
+    forgotPasswordLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      showResetPasswordForm();
+    });
+
+    // Show login form
+    backToLoginLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      showLoginForm();
+    });
+
+    // Function to show the reset password form
+    function showResetPasswordForm() {
+      loginForm.style.display = "none";
+      resetPasswordForm.style.display = "block";
+      formTitle.textContent = "Reset Password";
+    }
+
+    // Function to show the login form
+    function showLoginForm() {
+      resetPasswordForm.style.display = "none";
+      loginForm.style.display = "block";
+      formTitle.textContent = "Login";
+    }
+
+    // Function to show success modal
+    function showSuccessModal(title, message, buttonText, buttonAction) {
+      modalTitle.textContent = title;
+      modalMessage.textContent = message;
+      modalButton.textContent = buttonText;
+      
+      // Remove previous event listeners by using a simpler approach
+      modalButton.onclick = null; // Clear any existing click handlers
+      modalButton.addEventListener("click", buttonAction);
+      
+      // Show the modal
+      successModal.classList.add("active");
+      
+      // Add confetti animation for login success
+      if (title === "Login Successful!") {
+        createConfetti();
+      }
+    }
+
+    // Function to redirect to game page
+    function redirectToGame() {
+      window.location.href = "game.html";
+    }
+
+    // Function to create confetti animation
+    function createConfetti() {
+      const colors = ['#05b9c7', '#036575', '#00d4e0', '#05e6f3', 'white'];
+      for (let i = 0; i < 50; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.width = Math.random() * 12 + 5 + 'px';
+        confetti.style.height = Math.random() * 12 + 5 + 'px';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+        confetti.style.opacity = Math.random() * 0.7 + 0.3;
+        document.body.appendChild(confetti);
+        setTimeout(() => confetti.remove(), 5000);
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,2723 @@
+[
+    {
+        "question": "Which of the following is the correct way to declare a pointer in C?",
+        "options": ["int ptr;", "ptr int;", "int *ptr;", "*int ptr;"],
+        "answer": "C"
+    },
+    {
+        "question": "What is the output of the following C code?",
+        "code": "#include <stdio.h>\nint main() {\nint x = 5;\nprintf(\"%d\", ++x);\nreturn 0;\n}",
+        "options": ["5", "6", "4", "Error"],
+        "answer": "B"
+    },
+    {
+        "question": "Which header file should be included to use the malloc() function in C?",
+        "options": ["stdio.h", "stdlib.h", "memory.h", "string.h"],
+        "answer": "B"
+    },
+    {
+        "question": "What is the output of the following Python code?",
+        "code": "x = [1, 2, 3]\nprint(x * 2)",
+        "options": ["[1, 2, 3, 1, 2, 3]", "[2, 4, 6]", "[1, 1, 2, 2, 3, 3]", "Error"],
+        "answer": "A"
+    },
+    {
+        "question": "What is the purpose of the 'yield' keyword in Python?",
+        "options": [
+            "To exit from a function",
+            "To pause a function and return a value, resuming where it left off on next call",
+            "To indicate that a function is deprecated",
+            "To create a lambda function"
+        ],
+        "answer": "B"
+    },
+    {
+        "question": "What is the output of the following C code?",
+        "code": "#include <stdio.h>\nint main() {\nint a = 10;\nint b = 20;\nint *p = &a;\n*p = 30;\np = &b;\n*p = 40;\nprintf(\"%d %d\", a, b);\nreturn 0;\n}",
+        "options": ["10 20", "30 20", "30 40", "40 40"],
+        "answer": "C"
+    },
+    {
+        "question": "What is the purpose of the 'with' statement in Python?",
+        "options": [
+            "To create a new scope for variables",
+            "To handle exceptions",
+            "To ensure proper acquisition and release of resources",
+            "To create a conditional statement similar to switch-case"
+        ],
+        "answer": "C"
+    },
+    {
+        "question": "What is the output of the following Python code?",
+        "code": "def func(x=[]):\nx.append(1)\nreturn x\n\nprint(func())\nprint(func())",
+        "options": ["[1] and [1]", "[1] and [1, 1]", "[1] and []", "Raises an error"],
+        "answer": "B"
+    },
+    {
+        "question": "What is the purpose of the 'volatile' keyword in C?",
+        "options": [
+            "To declare a variable that cannot be modified",
+            "To tell the compiler that a variable can be changed by external factors",
+            "To create a dynamic variable",
+            "To improve performance by storing the variable in CPU registers"
+        ],
+        "answer": "B"
+    },
+    {
+        "question": "What is the output of the following Python code?",
+        "code": "s = \"Hello\"\ntry:\ns[0] = \"h\"\nprint(\"Success\")\nexcept:\nprint(\"Error\")",
+        "options": ["Success", "Error", "Nothing", "hello"],
+        "answer": "B"
+    },
+    
+        {
+            "question": "What is the correct way to declare a variable in C?",
+            "options": ["int x;", "x = 5;", "var x;", "x int;"],
+            "answer": "A",
+            "language": "C",
+            "difficulty": "Basic"
+        },
+        {
+            "question": "What is the output of `print(2 + 2)` in Python?",
+            "options": ["4", "22", "Error", "None"],
+            "answer": "A",
+            "language": "Python",
+            "difficulty": "Basic"
+        },
+        {
+            "question": "What is the purpose of the `main()` function in C?",
+            "options": [
+                "It is the entry point of the program",
+                "It is used to declare variables",
+                "It is used to include header files",
+                "It is optional in C programs"
+            ],
+            "answer": "A",
+            "language": "C",
+            "difficulty": "Basic"
+        },
+        {
+            "question": "What is the output of `printf(\"%d\", 10 + 5);` in C?",
+            "options": ["15", "10 + 5", "105", "Error"],
+            "answer": "A",
+            "language": "C",
+            "difficulty": "Basic"
+        },
+        {
+            "question": "What is the output of the following C code?",
+            "code": "#include <stdio.h>\nint main() {\nint x = 5;\nint *p = &x;\nprintf(\"%d\", *p);\nreturn 0;\n}",
+            "options": ["5", "Address of x", "Error", "None"],
+            "answer": "A",
+            "language": "C",
+            "difficulty": "Intermediate"
+        },
+        {
+            "question": "What is the output of the following Python code?",
+            "code": "x = [1, 2, 3]\ny = x\ny.append(4)\nprint(x)",
+            "options": ["[1, 2, 3]", "[1, 2, 3, 4]", "[4, 1, 2, 3]", "Error"],
+            "answer": "B",
+            "language": "Python",
+            "difficulty": "Intermediate"
+        },
+        {
+            "question": "What is the purpose of the `volatile` keyword in C?",
+            "options": [
+                "To declare a constant variable",
+                "To indicate that a variable can be changed by external factors",
+                "To improve performance",
+                "To declare a static variable"
+            ],
+            "answer": "B",
+            "language": "C",
+            "difficulty": "Intermediate"
+        },
+        {
+            "question": "What is the output of the following Python code?",
+            "code": "def func(x=[]):\nx.append(1)\nreturn x\n\nprint(func())\nprint(func())",
+            "options": ["[1] and [1]", "[1] and [1, 1]", "[1] and []", "Error"],
+            "answer": "B",
+            "language": "Python",
+            "difficulty": "Intermediate"
+        },
+        {
+            "question": "What is the output of the following C code?",
+            "code": "#include <stdio.h>\nint main() {\nint arr[] = {10, 20, 30, 40, 50};\nint *p = arr;\nprintf(\"%d %d\", *p++, *p);\nreturn 0;\n}",
+            "options": ["10 10", "10 20", "20 20", "20 30"],
+            "answer": "B",
+            "language": "C",
+            "difficulty": "Advanced"
+        },
+        {
+            "question": "What is the purpose of the `yield` keyword in Python?",
+            "options": [
+                "To exit from a function",
+                "To pause a function and return a value, resuming where it left off on next call",
+                "To indicate that a function is deprecated",
+                "To create a lambda function"
+            ],
+            "answer": "B",
+            "language": "Python",
+            "difficulty": "Advanced"
+        },
+        {
+            "question": "What is the correct way to include a header file in C?",
+            "options": ["#include <stdio.h>", "#include stdio.h", "#include 'stdio.h'", "include <stdio.h>"],
+            "answer": "A",
+            "language": "C",
+            "difficulty": "Basic"
+        },
+        {
+            "question": "What is the output of `print(type(5))` in Python?",
+            "options": ["<class 'int'>", "<class 'float'>", "<class 'str'>", "Error"],
+            "answer": "A",
+            "language": "Python",
+            "difficulty": "Basic"
+        },
+        {
+            "question": "Which of the following is a valid Python variable name?",
+            "options": ["1var", "_var", "var-name", "var name"],
+            "answer": "B",
+            "language": "Python",
+            "difficulty": "Basic"
+        },
+        {
+            "question": "What is the output of `printf(\"%c\", 'A');` in C?",
+            "options": ["A", "65", "Error", "None"],
+            "answer": "A",
+            "language": "C",
+            "difficulty": "Basic"
+        },
+        {
+            "question": "What is the purpose of the `return` statement in a function?",
+            "options": [
+                "To exit the function and return a value",
+                "To print a value",
+                "To declare a variable",
+                "To include a library"
+            ],
+            "answer": "A",
+            "language": "C",
+            "difficulty": "Basic"
+        },
+        {
+            "question": "What is the output of the following C code?",
+            "code": "#include <stdio.h>\nint main() {\nint x = 10;\nint y = x++;\nprintf(\"%d %d\", x, y);\nreturn 0;\n}",
+            "options": ["10 10", "11 10", "10 11", "11 11"],
+            "answer": "B",
+            "language": "C",
+            "difficulty": "Intermediate"
+        },
+        {
+            "question": "What is the output of the following Python code?",
+            "code": "x = [1, 2, 3]\ny = x[:]\ny.append(4)\nprint(x)",
+            "options": ["[1, 2, 3]", "[1, 2, 3, 4]", "[4, 1, 2, 3]", "Error"],
+            "answer": "A",
+            "language": "Python",
+            "difficulty": "Intermediate"
+        },
+        {
+            "question": "What is the purpose of the `static` keyword in C?",
+            "options": [
+                "To declare a global variable",
+                "To limit the scope of a variable to the file",
+                "To create a constant variable",
+                "To improve performance"
+            ],
+            "answer": "B",
+            "language": "C",
+            "difficulty": "Intermediate"
+        },
+        {
+            "question": "What is the output of the following Python code?",
+            "code": "def func(x):\nreturn x * 2\n\nprint(func(5))",
+            "options": ["10", "55", "Error", "None"],
+            "answer": "A",
+            "language": "Python",
+            "difficulty": "Intermediate"
+        },
+        {
+            "question": "What is the output of `print(3 * 'a')` in Python?",
+            "options": ["aaa", "3a", "Error", "None"],
+            "answer": "A",
+            "language": "Python",
+            "difficulty": "Basic"
+        },
+        {
+            "question": "What is the correct way to declare a constant in C?",
+            "options": ["const int x = 5;", "int const x = 5;", "#define x 5", "All of the above"],
+            "answer": "D",
+            "language": "C",
+            "difficulty": "Basic"
+        },
+        {
+            "question": "What is the output of `print(len('Hello'))` in Python?",
+            "options": ["5", "6", "Error", "None"],
+            "answer": "A",
+            "language": "Python",
+            "difficulty": "Basic"
+        },
+        {
+            "question": "What is the purpose of the `scanf()` function in C?",
+            "options": [
+                "To print output",
+                "To read input",
+                "To perform calculations",
+                "To include a library"
+            ],
+            "answer": "B",
+            "language": "C",
+            "difficulty": "Basic"
+        },
+        {
+            "question": "What is the output of the following C code?",
+            "code": "#include <stdio.h>\nint main() {\nint x = 5;\nint y = x++ + ++x;\nprintf(\"%d\", y);\nreturn 0;\n}",
+            "options": ["10", "11", "12", "13"],
+            "answer": "C",
+            "language": "C",
+            "difficulty": "Intermediate"
+        },
+        {
+            "question": "What is the output of the following Python code?",
+            "code": "x = [1, 2, 3]\ny = x.copy()\ny.append(4)\nprint(x)",
+            "options": ["[1, 2, 3]", "[1, 2, 3, 4]", "[4, 1, 2, 3]", "Error"],
+            "answer": "A",
+            "language": "Python",
+            "difficulty": "Intermediate"
+        },
+        {
+            "question": "What is the purpose of the `typedef` keyword in C?",
+            "options": [
+                "To define a new data type",
+                "To declare a variable",
+                "To include a library",
+                "To create a function"
+            ],
+            "answer": "A",
+            "language": "C",
+            "difficulty": "Intermediate"
+        },
+        {
+            "question": "What is the output of the following C code?",
+            "code": "#include <stdio.h>\nint main() {\nint arr[] = {10, 20, 30, 40, 50};\nint *p = arr + 3;\nprintf(\"%d\", *p);\nreturn 0;\n}",
+            "options": ["10", "20", "30", "40"],
+            "answer": "D",
+            "language": "C",
+            "difficulty": "Advanced"
+        },
+        {
+            "question": "What is the purpose of the `__str__` method in Python?",
+            "options": [
+                "To return a string representation of an object",
+                "To initialize an object",
+                "To define a class",
+                "To create a function"
+            ],
+            "answer": "A",
+            "language": "Python",
+            "difficulty": "Advanced"
+        },
+        
+            {
+              "question": "What will be the output of the following JavaScript code?",
+              "code": "console.log(typeof NaN);",
+              "options": ["undefined", "object", "number", "NaN"],
+              "answer": "C",
+              "language": "javascript",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which of the following is NOT a JavaScript data type?",
+              "options": ["string", "boolean", "float", "undefined"],
+              "answer": "C",
+              "language": "javascript", 
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the correct way to create a function in JavaScript?",
+              "options": [
+                "function = myFunction()",
+                "function:myFunction()",
+                "function myFunction()",
+                "create myFunction()"
+              ],
+              "answer": "C",
+              "language": "javascript",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the output of this JavaScript code?",
+              "code": "const arr = [1, 2, 3];\narr[10] = 10;\nconsole.log(arr.length);",
+              "options": ["3", "10", "11", "Error"],
+              "answer": "C",
+              "language": "javascript",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What will `console.log(0.1 + 0.2 === 0.3)` return in JavaScript?",
+              "options": ["true", "false", "undefined", "Error"],
+              "answer": "B",
+              "language": "javascript",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "In JavaScript, what is the purpose of the 'use strict' directive?",
+              "options": [
+                "Enables strict type checking like TypeScript",
+                "Forces all variables to be declared before use",
+                "Throws errors for some actions that would otherwise be silent",
+                "All of the above"
+              ],
+              "answer": "C",
+              "language": "javascript",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the output of this JavaScript promise?",
+              "code": "Promise.resolve(1)\n  .then(x => x + 1)\n  .then(x => { throw new Error('Error') })\n  .catch(err => 1)\n  .then(x => x + 1)\n  .then(x => console.log(x))\n  .catch(err => console.log('error'));",
+              "options": ["1", "2", "3", "error"],
+              "answer": "C",
+              "language": "javascript",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "In Python, what does the following code return?",
+              "code": "print([i for i in range(10) if i % 2 == 0])",
+              "options": ["[0, 2, 4, 6, 8]", "[1, 3, 5, 7, 9]", "0, 2, 4, 6, 8", "Error"],
+              "answer": "A",
+              "language": "python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What will be the output of the following Python code?",
+              "code": "def func(a, b, c=5):\n    print(a, b, c)\n\nfunc(1, c=3, b=2)",
+              "options": ["1 2 3", "1 2 5", "1 c=3 b=2", "Error"],
+              "answer": "A",
+              "language": "python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "In Python, which statement is equivalent to `x += y`?",
+              "options": ["x = x + y", "x = y + x", "x = y", "x + y = x"],
+              "answer": "A",
+              "language": "python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What does the following Python code output?",
+              "code": "a = [1, 2, 3, 4]\nb = a\nb[0] = 5\nprint(a[0])",
+              "options": ["1", "5", "None", "Error"],
+              "answer": "B",
+              "language": "python",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which Python data structure is ordered, mutable, and does not allow duplicate elements?",
+              "options": ["List", "Tuple", "Set", "Dictionary"],
+              "answer": "A",
+              "language": "python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What will be the output of this Python code snippet?",
+              "code": "try:\n    print(1)\n    assert False, \"Error\"\n    print(2)\nexcept AssertionError:\n    print(3)\nfinally:\n    print(4)",
+              "options": ["1 3 4", "1 2 3 4", "1 4", "Error"],
+              "answer": "A",
+              "language": "python",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the output of this Python decorator example?",
+              "code": "def decorator(func):\n    def wrapper(*args, **kwargs):\n        return func(*args, **kwargs) * 2\n    return wrapper\n\n@decorator\ndef multiply(a, b):\n    return a * b\n\nprint(multiply(2, 3))",
+              "options": ["6", "12", "5", "Error"],
+              "answer": "B",
+              "language": "python",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the time complexity of the following Python operation?",
+              "code": "my_list = [1, 2, 3, 4, 5]\nmy_list.insert(0, 0)",
+              "options": ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+              "answer": "C",
+              "language": "python",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the output of this C code?",
+              "code": "#include <stdio.h>\nint main() {\n  int x = 5;\n  printf(\"%d\", x++);\n  return 0;\n}",
+              "options": ["5", "6", "Error", "Undefined behavior"],
+              "answer": "A",
+              "language": "c",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What does the following C code snippet do?",
+              "code": "#include <stdio.h>\nint main() {\n  int x = 10;\n  int y = x-- - --x;\n  printf(\"%d %d\", x, y);\n  return 0;\n}",
+              "options": ["8 2", "8 3", "9 1", "9 2"],
+              "answer": "A",
+              "language": "c",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What will happen when the following C code is executed?",
+              "code": "#include <stdio.h>\nint main() {\n  char *str = \"Hello\";\n  str[0] = 'h';\n  printf(\"%s\\n\", str);\n  return 0;\n}",
+              "options": ["hello", "Hello", "hello", "Segmentation fault"],
+              "answer": "D",
+              "language": "c",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "In C, what is the size of the pointer on a 64-bit machine?",
+              "options": ["2 bytes", "4 bytes", "8 bytes", "Depends on the data type"],
+              "answer": "C",
+              "language": "c",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the output of this C code with bit manipulation?",
+              "code": "#include <stdio.h>\nint main() {\n  unsigned int x = 0x76543210;\n  printf(\"%x\", (x >> 4) & 0xF);\n  return 0;\n}",
+              "options": ["1", "2", "3", "7"],
+              "answer": "A",
+              "language": "c",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What does the `volatile` keyword mean in C?",
+              "options": [
+                "Variable should be stored in volatile memory",
+                "Value can change due to external factors",
+                "Variable cannot be optimized by compiler",
+                "Both B and C"
+              ],
+              "answer": "D",
+              "language": "c",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "Which HTML element is used to specify a header for a document?",
+              "options": ["<head>", "<header>", "<top>", "<heading>"],
+              "answer": "B",
+              "language": "html",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which CSS property controls the text size?",
+              "options": ["font-size", "text-size", "font-style", "text-style"],
+              "answer": "A",
+              "language": "css",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "In CSS, what does the `z-index` property determine?",
+              "options": [
+                "The transparency of an element",
+                "The order of elements on the z-axis (stacking context)",
+                "The zoom level of an element",
+                "The vertical alignment of text"
+              ],
+              "answer": "B",
+              "language": "css",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the correct CSS syntax for making all paragraph elements bold?",
+              "options": ["p {text-size: bold;}", "p {font-weight: bold;}", "<p style='font-weight: bold'>", "p.all {font-weight: bold;}"],
+              "answer": "B",
+              "language": "css",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which HTML tag is used to define an internal style sheet?",
+              "options": ["<css>", "<style>", "<script>", "<stylesheet>"],
+              "answer": "B",
+              "language": "html",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the correct syntax to select an element with a specific id in CSS?",
+              "code": "<!-- HTML code -->\n<div id=\"myElement\">Content</div>",
+              "options": ["#myElement", ".myElement", "div.myElement", "*myElement"],
+              "answer": "A",
+              "language": "css",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the output of this SQL query?",
+              "code": "SELECT COUNT(*) FROM table1 WHERE id IN (SELECT id FROM table2);",
+              "options": [
+                "The number of rows in table1",
+                "The number of rows in table2",
+                "The number of rows in table1 that have matching IDs in table2",
+                "Error"
+              ],
+              "answer": "C",
+              "language": "sql",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "In SQL, which clause is used to filter groups?",
+              "options": ["WHERE", "HAVING", "FILTER", "GROUP BY"],
+              "answer": "B",
+              "language": "sql",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What does this SQL query do?",
+              "code": "SELECT column1, COUNT(*) FROM table1 GROUP BY column1 HAVING COUNT(*) > 5;",
+              "options": [
+                "Returns column1 values that appear more than 5 times",
+                "Returns the first 5 rows grouped by column1",
+                "Returns column1 values and their counts for all rows",
+                "Returns column1 values where column1 > 5"
+              ],
+              "answer": "A",
+              "language": "sql",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "In React.js, what method is used to change state in a class component?",
+              "options": ["this.state()", "this.setState()", "this.changeState()", "this.updateState()"],
+              "answer": "B",
+              "language": "react",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the purpose of useEffect hook in React?",
+              "options": [
+                "To handle events",
+                "To perform side effects in function components",
+                "To create state variables",
+                "To define component properties"
+              ],
+              "answer": "B",
+              "language": "react",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What will this React code render?",
+              "code": "function App() {\n  const [count, setCount] = React.useState(0);\n  return (\n    <div>\n      <p>You clicked {count} times</p>\n      <button onClick={() => setCount(count + 1)}>\n        Click me\n      </button>\n    </div>\n  );\n}",
+              "options": [
+                "A counter that increments when the button is clicked",
+                "A static paragraph with 'You clicked 0 times'",
+                "An error because useState is not imported",
+                "Nothing, as the code has syntax errors"
+              ],
+              "answer": "A",
+              "language": "react",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the output of this Java code?",
+              "code": "public class Test {\n  public static void main(String[] args) {\n    String s1 = \"Hello\";\n    String s2 = \"Hello\";\n    System.out.println(s1 == s2);\n  }\n}",
+              "options": ["true", "false", "Hello", "Error"],
+              "answer": "A",
+              "language": "java",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "In Java, which collection type should be used when you need fast access to elements by index?",
+              "options": ["LinkedList", "ArrayList", "HashSet", "TreeSet"],
+              "answer": "B",
+              "language": "java",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the result of this Java code?",
+              "code": "ArrayList<Integer> list = new ArrayList<>();\nlist.add(1);\nlist.add(2);\nlist.add(1, 3);\nSystem.out.println(list);",
+              "options": ["[1, 2, 3]", "[1, 3, 2]", "[3, 1, 2]", "[1, 2]"],
+              "answer": "B",
+              "language": "java",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the output of this Java code with lambda expression?",
+              "code": "interface Func {\n  int apply(int x, int y);\n}\n\npublic class Test {\n  public static void main(String[] args) {\n    Func add = (int x, int y) -> x + y;\n    System.out.println(add.apply(3, 4));\n  }\n}",
+              "options": ["7", "12", "Error", "None of the above"],
+              "answer": "A",
+              "language": "java",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the time complexity of binary search?",
+              "options": ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+              "answer": "B",
+              "language": "general",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which data structure follows the Last In First Out (LIFO) principle?",
+              "options": ["Queue", "Stack", "Linked List", "Heap"],
+              "answer": "B",
+              "language": "general",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the worst-case time complexity of quicksort?",
+              "options": ["O(n)", "O(n log n)", "O(n²)", "O(2^n)"],
+              "answer": "C",
+              "language": "general",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the correct way to declare a variable in C?",
+              "options": ["int x;", "x = 5;", "var x;", "x int;"],
+              "answer": "A",
+              "language": "C",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which of the following is the correct way to include the standard input/output header file in C?",
+              "options": ["#include <stdio.h>", "include <stdio.h>", "import stdio.h", "#import <stdio.h>"],
+              "answer": "A",
+              "language": "C",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the output of printf(\"%d\", 10 + 5);?",
+              "options": ["15", "10 + 5", "105", "Error"],
+              "answer": "A",
+              "language": "C",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the purpose of the scanf() function in C?",
+              "options": ["To print output", "To read input from the user", "To perform calculations", "To include a library"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which operator is used for taking the address of a variable in C?",
+              "options": ["*", "&", "#", "@"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which of the following is the correct way to comment a single line in C?",
+              "options": ["// This is a comment", "/* This is a comment */", "# This is a comment", "<!-- This is a comment -->"],
+              "answer": "A",
+              "language": "C",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the size of int data type in C on a typical 32-bit compiler?",
+              "options": ["1 byte", "2 bytes", "4 bytes", "8 bytes"],
+              "answer": "C",
+              "language": "C",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What will be the output of the following code?\n#include <stdio.h>\nint main() {\n    int x = 5;\n    printf(\"%d %d\", x, x++);\n    return 0;\n}",
+              "options": ["5 5", "5 6", "6 5", "6 6"],
+              "answer": "A",
+              "language": "C",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which of the following is not a loop structure in C?",
+              "options": ["for", "while", "do-while", "foreach"],
+              "answer": "D",
+              "language": "C",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the correct way to declare a constant in C?",
+              "options": ["const int x = 5;", "constant int x = 5;", "int const x = 5;", "Both A and C"],
+              "answer": "D",
+              "language": "C",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the output of printf(\"%c\", 'A' + 1);?",
+              "options": ["A", "B", "AB", "65"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which function is used to dynamically allocate memory in C?",
+              "options": ["alloc()", "malloc()", "memalloc()", "calloc()"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the correct format specifier for printing a float in C?",
+              "options": ["%d", "%f", "%c", "%s"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the result of 5/2 in C?",
+              "options": ["2.5", "2", "2.0", "Error"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which of the following correctly declares an array of 5 integers in C?",
+              "options": ["int array[5];", "array int[5];", "int[5] array;", "array[5] int;"],
+              "answer": "A",
+              "language": "C",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the output of the following C code?\n#include <stdio.h>\nint main() {\n    int x = 5;\n    int *p = &x;\n    printf(\"%d\", *p);\n    return 0;\n}",
+              "options": ["5", "Address of x", "Error", "None"],
+              "answer": "A",
+              "language": "C",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the purpose of the 'static' keyword when used with a local variable in C?",
+              "options": ["It makes the variable accessible from other files", "It preserves the variable's value between function calls", "It allocates memory on the heap", "It prevents the variable from being modified"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What will be the output of the following code?\n#include <stdio.h>\nint main() {\n    int a = 10;\n    int b = 20;\n    int *p = &a;\n    *p = 30;\n    p = &b;\n    *p = 40;\n    printf(\"%d %d\", a, b);\n    return 0;\n}",
+              "options": ["10 20", "30 20", "30 40", "10 40"],
+              "answer": "C",
+              "language": "C",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What does the 'typedef' keyword do in C?",
+              "options": ["Defines a new variable", "Creates a new data type alias", "Declares a function", "Includes a header file"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is a structure in C?",
+              "options": ["A built-in data type", "A collection of variables of different data types", "A reserved keyword", "A function prototype"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What will be the output of the following code?\n#include <stdio.h>\nint main() {\n    int x = 10;\n    int y = x++ + ++x;\n    printf(\"%d %d\", x, y);\n    return 0;\n}",
+              "options": ["11 21", "12 23", "12 22", "11 20"],
+              "answer": "C",
+              "language": "C",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the purpose of the 'volatile' keyword in C?",
+              "options": ["To declare a variable that cannot be modified", "To optimize the code for faster execution", "To indicate that a variable can be changed by external factors", "To declare a variable with a temporary lifetime"],
+              "answer": "C",
+              "language": "C",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is a union in C?",
+              "options": ["A collection of variables of the same data type", "A collection of variables of different data types that share the same memory location", "A special kind of array", "A pointer to a structure"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What will be the output of the following code?\n#include <stdio.h>\nint main() {\n    int arr[] = {10, 20, 30, 40, 50};\n    int *p = arr + 2;\n    printf(\"%d\", *p);\n    return 0;\n}",
+              "options": ["10", "20", "30", "40"],
+              "answer": "C",
+              "language": "C",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which header file should be included to use the malloc() function in C?",
+              "options": ["stdio.h", "stdlib.h", "string.h", "memory.h"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the purpose of the 'extern' keyword in C?",
+              "options": ["To define a global variable", "To declare a variable that is defined in another file", "To create a static variable", "To allocate memory dynamically"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is a function pointer in C?",
+              "options": ["A pointer to a memory location", "A special type of integer pointer", "A pointer that points to the address of a function", "A pointer to an array"],
+              "answer": "C",
+              "language": "C",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the difference between 'malloc()' and 'calloc()' in C?",
+              "options": ["malloc() allocates single block of memory while calloc() allocates multiple blocks", "malloc() does not initialize memory while calloc() initializes to zero", "malloc() is faster than calloc()", "Both A and B"],
+              "answer": "D",
+              "language": "C",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What will be the output of the following code?\n#include <stdio.h>\nint main() {\n    char str[] = \"Hello\";\n    char *p = str;\n    printf(\"%c\", ++*p);\n    return 0;\n}",
+              "options": ["H", "I", "e", "Error"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is a dangling pointer in C?",
+              "options": ["A pointer pointing to a memory location that has been deleted or deallocated", "A pointer that hasn't been initialized", "A pointer pointing to a function", "A pointer to a null value"],
+              "answer": "A",
+              "language": "C",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What will be the output of the following code?\n#include <stdio.h>\nstatic int i = 5;\nvoid f() { i++; }\nint main() {\n    printf(\"%d \", i);\n    f();\n    printf(\"%d\", i);\n    return 0;\n}",
+              "options": ["5 5", "5 6", "Undefined behavior", "Compilation error"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the purpose of the 'restrict' keyword in C99?",
+              "options": ["To prevent a variable from being modified", "To inform the compiler that a pointer does not alias with any other pointer", "To restrict the scope of a variable", "To prevent memory leaks"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What will be the output of the following code?\n#include <stdio.h>\nint main() {\n    int a[5] = {1, 2, 3, 4, 5};\n    int *p = a + 1;\n    printf(\"%d, %d\", *p, *(p+2));\n    return 0;\n}",
+              "options": ["1, 3", "2, 4", "2, 3", "1, 4"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is a memory leak in C?",
+              "options": ["When a program crashes due to insufficient memory", "When memory is allocated dynamically but never freed", "When a pointer points to a memory location that no longer exists", "When two pointers point to the same memory location"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the purpose of the 'register' keyword in C?",
+              "options": ["To store a variable in a CPU register for faster access", "To define a global variable", "To create a static variable", "To allocate memory on the heap"],
+              "answer": "A",
+              "language": "C",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What will be the output of the following code?\n#include<stdio.h>\nint main() {\n    void *vp;\n    char ch = 'A';\n    vp = &ch;\n    printf(\"%c\", *(char*)vp);\n    return 0;\n}",
+              "options": ["A", "65", "Error", "Undefined behavior"],
+              "answer": "A",
+              "language": "C",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is a bit field in C?",
+              "options": ["A special kind of array", "A field that can only store binary values", "A structure member with a specified bit width", "A variable that can store multiple values"],
+              "answer": "C",
+              "language": "C",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is function inlining in C?",
+              "options": ["Copying the function code at the point of call", "Converting a function to a macro", "Calling a function recursively", "Defining a function within another function"],
+              "answer": "A",
+              "language": "C",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What will happen when the following code is executed?\n#include <stdio.h>\nint main() {\n    char *str = \"Hello\";\n    str[0] = 'h';\n    printf(\"%s\", str);\n    return 0;\n}",
+              "options": ["hello", "Hello", "Undefined behavior", "Segmentation fault"],
+              "answer": "D",
+              "language": "C",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the difference between deep copy and shallow copy in C?",
+              "options": ["Deep copy duplicates all values while shallow copy only duplicates references", "Shallow copy is more efficient than deep copy", "Deep copy preserves the original structure", "Both A and B"],
+              "answer": "A",
+              "language": "C",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is tail recursion in C?",
+              "options": ["A recursion where the recursive call is the last statement in the function", "A recursion that never terminates", "A recursion with multiple base cases", "A recursion with no base case"],
+              "answer": "A",
+              "language": "C",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What will be the output of the following code?\n#include <stdio.h>\nint main() {\n    int i = 10;\n    void *p = &i;\n    int *q = (int*)p;\n    *q = 20;\n    printf(\"%d\", i);\n    return 0;\n}",
+              "options": ["10", "20", "Garbage value", "Error"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the difference between 'const char *p' and 'char * const p' in C?",
+              "options": ["They are the same", "In the first, the pointer can be modified but not the data; in the second, the data can be modified but not the pointer", "In the first, the data cannot be modified; in the second, the pointer cannot be modified", "Both declarations prevent modifications to both pointer and data"],
+              "answer": "C",
+              "language": "C",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the purpose of the 'setjmp()' and 'longjmp()' functions in C?",
+              "options": ["To allocate and deallocate memory", "To implement exception handling", "To perform file operations", "To define macros"],
+              "answer": "B",
+              "language": "C",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the output of print(2 + 2)?",
+              "options": ["4", "22", "Error", "None"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which of the following is a valid way to declare a variable in Python?",
+              "options": ["var x = 5", "x = 5", "int x = 5", "declare x = 5"],
+              "answer": "B",
+              "language": "Python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the correct way to create a list in Python?",
+              "options": ["list = [1, 2, 3]", "list = (1, 2, 3)", "list = {1, 2, 3}", "array(1, 2, 3)"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What does len([1, 2, 3]) return?",
+              "options": ["3", "2", "4", "Error"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the output of print('Hello' + 'World')?",
+              "options": ["HelloWorld", "Hello World", "Hello+World", "Error"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which of the following is the correct way to write a comment in Python?",
+              "options": ["// Comment", "/* Comment */", "# Comment", "'Comment'"],
+              "answer": "C",
+              "language": "Python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the output of print(type(5))?",
+              "options": ["<class 'int'>", "<class 'float'>", "<class 'str'>", "int"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which of the following is a valid Python function definition?",
+              "options": ["function add(a, b) { return a + b; }", "def add(a, b): return a + b", "add = function(a, b) => a + b", "def add(a, b) { return a + b }"],
+              "answer": "B",
+              "language": "Python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the output of print(3 * 'A')?",
+              "options": ["AAA", "3A", "A3", "Error"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "How do you check if 'apple' is in the list ['banana', 'apple', 'orange']?",
+              "options": ["'apple' in ['banana', 'apple', 'orange']", "['banana', 'apple', 'orange'].contains('apple')", "['banana', 'apple', 'orange'].has('apple')", "check('apple', ['banana', 'apple', 'orange'])"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the result of 10 / 3 in Python?",
+              "options": ["3", "3.0", "3.3333...", "3.33"],
+              "answer": "C",
+              "language": "Python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the output of print(bool(0))?",
+              "options": ["True", "False", "0", "Error"],
+              "answer": "B",
+              "language": "Python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which of the following correctly creates a dictionary in Python?",
+              "options": ["dict = {1: 'one', 2: 'two'}", "dict = [1: 'one', 2: 'two']", "dict = (1, 'one', 2, 'two')", "dict = 1='one', 2='two'"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the output of print('Hello'[1])?",
+              "options": ["H", "e", "He", "Error"],
+              "answer": "B",
+              "language": "Python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the result of 10 // 3 in Python?",
+              "options": ["3", "3.0", "3.3333...", "3.33"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the output of the following Python code?\nlist = [1, 2, 3]\nlist2 = list\nlist2.append(4)\nprint(list)",
+              "options": ["[1, 2, 3]", "[1, 2, 3, 4]", "[4, 1, 2, 3]", "Error"],
+              "answer": "B",
+              "language": "Python",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the purpose of the 'yield' keyword in Python?",
+              "options": ["To terminate a function", "To return multiple values from a function", "To create a generator function", "To import modules"],
+              "answer": "C",
+              "language": "Python",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What will be the output of the following code?\ndef foo(a, b=[]):\n    b.append(a)\n    return b\nprint(foo(1))\nprint(foo(2))",
+              "options": ["[1] and [2]", "[1] and [1, 2]", "[1], [1]", "[1, 2], [1, 2]"],
+              "answer": "B",
+              "language": "Python",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is a decorator in Python?",
+              "options": ["A function that takes another function and extends its behavior", "A type of comment", "A way to define classes", "A built-in data structure"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the output of the following code?\nlist = [1, 2, 3, 4]\nprint(list[-2])",
+              "options": ["2", "3", "4", "Error"],
+              "answer": "B",
+              "language": "Python",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What will be the output of the following code?\nprint({1, 2, 3, 3, 2, 1})",
+              "options": ["{1, 2, 3}", "[1, 2, 3, 3, 2, 1]", "{1, 1, 2, 2, 3, 3}", "Error"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the purpose of the '__init__' method in Python?",
+              "options": ["To initialize an object after it is created", "To delete an object", "To initialize a class", "To import modules"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What will be the output of the following code?\nprint([i for i in range(5) if i % 2 == 0])",
+              "options": ["[0, 2, 4]", "[0, 1, 2, 3, 4]", "[1, 3]", "[2, 4]"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the difference between append() and extend() methods of a list?",
+              "options": ["append() adds a single element, extend() adds multiple elements", "append() adds at the beginning, extend() adds at the end", "append() can add any object, extend() can only add lists", "There is no difference"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What will be the output of the following code?\nprint(2 ** 3 ** 2)",
+              "options": ["64", "512", "36", "Error"],
+              "answer": "B",
+              "language": "Python",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the output of the following code?\ntry:\n    print(1)\n    raise Exception('Error')\n    print(2)\nexcept:\n    print(3)\nfinally:\n    print(4)",
+              "options": ["1, 2, 3, 4", "1, 3, 4", "1, 4", "Error"],
+              "answer": "B",
+              "language": "Python",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What does the 'pass' statement do in Python?",
+              "options": ["It passes the control to the next iteration", "It passes the control to the calling function", "It does nothing and is used as a placeholder", "It passes variables between functions"],
+              "answer": "C",
+              "language": "Python",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the output of the following code?\nprint(type(lambda x: x))",
+              "options": ["<class 'function'>", "<class 'lambda'>", "<class 'builtin_function_or_method'>", "<class 'method'>"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What will be the output of the following code?\nx = [1, 2, 3]\ny = x[:]\ny.append(4)\nprint(x)",
+              "options": ["[1, 2, 3]", "[1, 2, 3, 4]", "[4, 1, 2, 3]", "Error"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the output of the following code?\nx = 1\ndef f():\n    x = 2\n    def g():\n        nonlocal x\n        x = 3\n    g()\n    print(x)\nf()",
+              "options": ["1", "2", "3", "Error"],
+              "answer": "C",
+              "language": "Python",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is a metaclass in Python?",
+              "options": ["A class that inherits from multiple classes", "A class whose instances are classes", "A class that cannot be instantiated", "A class that implements multiple interfaces"],
+              "answer": "B",
+              "language": "Python",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the output of the following code?\nclass A:\n    x = 1\nclass B(A):\n    pass\nclass C(A):\n    x = 2\nclass D(B, C):\n    pass\nprint(D.x)",
+              "options": ["1", "2", "None", "Error"],
+              "answer": "B",
+              "language": "Python",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the purpose of the '__slots__' attribute in a Python class?",
+              "options": ["To restrict the attributes that can be added to an instance", "To define class methods", "To specify the order of method resolution", "To define static attributes"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What will be the output of the following code?\ndef decorator(func):\n    def wrapper(*args, **kwargs):\n        return func(*args, **kwargs) * 2\n    return wrapper\n\n@decorator\ndef multiply(a, b):\n    return a * b\n\nprint(multiply(2, 3))",
+              "options": ["6", "12", "Error", "None"],
+              "answer": "B",
+              "language": "Python",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is a context manager in Python?",
+              "options": ["A class that manages the creation of contexts", "An object that defines the methods __enter__ and __exit__", "A function that manages memory allocation", "A decorator that defines context"],
+              "answer": "B",
+              "language": "Python",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the output of the following code?\nimport threading\ncounter = 0\ndef increment():\n    global counter\n    for _ in range(100000):\n        counter += 1\nthreads = [threading.Thread(target=increment) for _ in range(2)]\nfor t in threads: t.start()\nfor t in threads: t.join()\nprint(counter >= 200000)",
+              "options": ["True", "False", "Error", "None"],
+              "answer": "B",
+              "language": "Python",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the time complexity of the 'in' operator for a set in Python?",
+              "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+              "answer": "A",
+              "language": "Python",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "Which of the following is the correct way to declare a Java variable?",
+              "options": ["variable x;", "x = variable;", "int x;", "x int;"],
+              "answer": "C",
+              "language": "Java",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the default value of an int variable in Java?",
+              "options": ["0", "1", "null", "undefined"],
+              "answer": "A",
+              "language": "Java",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which keyword is used to define a class in Java?",
+              "options": ["struct", "class", "object", "define"],
+              "answer": "B",
+              "language": "Java",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the correct way to create an object in Java?",
+              "options": ["MyClass obj = construct MyClass();", "obj = new MyClass;", "new obj = MyClass();", "MyClass obj = new MyClass();"],
+              "answer": "D",
+              "language": "Java",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which data type is used to store text in Java?",
+              "options": ["text", "varchar", "String", "char[]"],
+              "answer": "C",
+              "language": "Java",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the output of System.out.println(5 + 3 + \" Hello \")?",
+              "options": ["5 + 3 Hello", "8 Hello", "Hello 8", "53 Hello"],
+              "answer": "B",
+              "language": "Java",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which loop executes at least once in Java?",
+              "options": ["for loop", "while loop", "do-while loop", "foreach loop"],
+              "answer": "C",
+              "language": "Java",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the correct way to comment a single line in Java?",
+              "options": ["/* comment */", "// comment", "# comment", "<!-- comment -->"],
+              "answer": "B",
+              "language": "Java",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which operator is used for comparing equality of two values in Java?",
+              "options": ["=", "==", "===", "equals()"],
+              "answer": "B",
+              "language": "Java",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the access modifier that makes a class visible only within its package?",
+              "options": ["public", "private", "protected", "default (no modifier)"],
+              "answer": "D",
+              "language": "Java",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the difference between ArrayList and LinkedList in Java?",
+              "options": ["ArrayList uses dynamic array, LinkedList uses doubly linked list", "ArrayList is synchronized, LinkedList is not", "ArrayList allows nulls, LinkedList doesn't", "ArrayList is faster for all operations"],
+              "answer": "A",
+              "language": "Java",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What does the 'final' keyword do when applied to a class?",
+              "options": ["Makes the class immutable", "Prevents the class from being garbage collected", "Prevents the class from being extended", "Makes all methods in the class final"],
+              "answer": "C",
+              "language": "Java",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which collection type should be used when you need to maintain insertion order and allow duplicates?",
+              "options": ["HashSet", "TreeSet", "HashMap", "ArrayList"],
+              "answer": "D",
+              "language": "Java",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the purpose of the 'static' keyword in Java?",
+              "options": ["To make a variable constant", "To make a variable or method belong to the class rather than an instance", "To make a class abstract", "To prevent object creation"],
+              "answer": "B",
+              "language": "Java",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is method overloading in Java?",
+              "options": ["Creating multiple methods with the same name but different parameters", "Implementing a method defined in an interface", "Hiding a method in a parent class", "Creating an abstract method"],
+              "answer": "A",
+              "language": "Java",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which interface would you implement to create a custom comparison logic in Java?",
+              "options": ["Sortable", "Comparator", "Comparable", "Comparer"],
+              "answer": "B",
+              "language": "Java",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What's the main difference between throw and throws in Java?",
+              "options": ["throw is used to explicitly throw an exception, throws is used to declare exceptions", "throw is for checked exceptions, throws is for unchecked exceptions", "throw is used in methods, throws is used in classes", "No difference, they are synonyms"],
+              "answer": "A",
+              "language": "Java",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What does the 'super' keyword do in Java?",
+              "options": ["References the superclass of the current object", "Makes a method call superfast", "Creates a new instance of the parent class", "Makes a variable accessible from any class"],
+              "answer": "A",
+              "language": "Java",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "When would you use a StringBuilder instead of a String in Java?",
+              "options": ["When you need thread safety", "When you need immutability", "When you need to store only characters", "When you need to perform many string manipulations"],
+              "answer": "D",
+              "language": "Java",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the purpose of the 'finally' block in a try-catch-finally statement?",
+              "options": ["To handle exceptions not caught by catch blocks", "To execute code regardless of whether an exception occurred", "To ensure the program terminates gracefully", "To make the try block optional"],
+              "answer": "B",
+              "language": "Java",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the time complexity of accessing an element in a ConcurrentHashMap?",
+              "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+              "answer": "A",
+              "language": "Java",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "Which JVM memory area stores method bytecode?",
+              "options": ["Heap", "Stack", "Method Area", "PC Register"],
+              "answer": "C",
+              "language": "Java",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the correct way to create an immutable class in Java?",
+              "options": ["Make all fields private and provide only getters", "Make the class abstract and fields private", "Mark the class as final, make fields private final, and don't provide setters", "Create a singleton class with private constructor"],
+              "answer": "C",
+              "language": "Java",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "Which Java feature allows you to execute code in parallel without managing threads directly?",
+              "options": ["Annotations", "Generics", "Reflection", "Stream API"],
+              "answer": "D",
+              "language": "Java",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is a phantom reference in Java?",
+              "options": ["A reference that is automatically set to null", "A reference that allows limited access to an object", "A reference that doesn't prevent garbage collection and is enqueued before finalization", "A reference to an object from another JVM"],
+              "answer": "C",
+              "language": "Java",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What does the synchronized keyword guarantee in Java?",
+              "options": ["Better performance", "Mutual exclusion and memory visibility", "Prevention of deadlocks", "Automatic thread scheduling"],
+              "answer": "B",
+              "language": "Java",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "Which design pattern does the java.lang.Runtime class implement?",
+              "options": ["Observer", "Factory", "Singleton", "Decorator"],
+              "answer": "C",
+              "language": "Java",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the main purpose of the volatile keyword in Java?",
+              "options": ["Makes a variable immune to JVM optimization", "Guarantees visibility of changes to variables across threads", "Prevents the variable from being modified", "Stores the variable in CPU cache"],
+              "answer": "B",
+              "language": "Java",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "Which of the following is NOT a valid functional interface in Java?",
+              "options": ["Predicate<T>", "Consumer<T>", "Collector<T>", "Supplier<T>"],
+              "answer": "C",
+              "language": "Java",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the difference between G1GC and CMS garbage collectors?",
+              "options": ["G1GC focuses on latency while CMS focuses on throughput", "G1GC is region-based while CMS is generational", "G1GC is older than CMS", "G1GC is single-threaded while CMS is multi-threaded"],
+              "answer": "B",
+              "language": "Java",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the correct way to write a JavaScript comment?",
+              "options": ["# This is a comment", "<!-- This is a comment -->", "/* This is a comment */", "// This is a comment"],
+              "answer": "D",
+              "language": "JavaScript",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which function is used to print content to the browser console?",
+              "options": ["console.print()", "console.log()", "print()", "document.write()"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "How do you declare a variable in modern JavaScript?",
+              "options": ["var x = 5;", "let x = 5;", "variable x = 5;", "x = 5;"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the result of '2' + 2 in JavaScript?",
+              "options": ["4", "22", "NaN", "TypeError"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which method is used to add an element at the end of an array?",
+              "options": ["push()", "append()", "add()", "insert()"],
+              "answer": "A",
+              "language": "JavaScript",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the correct way to check if a variable is undefined?",
+              "options": ["if (x === undefined)", "if (typeof x === 'undefined')", "if (x == null)", "if (!x)"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "How do you create a function in JavaScript?",
+              "options": ["function myFunction() {}", "function = myFunction() {}", "function:myFunction() {}", "def myFunction() {}"],
+              "answer": "A",
+              "language": "JavaScript",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What does the DOM stand for?",
+              "options": ["Document Object Model", "Display Object Management", "Digital Ordinance Model", "Document Order Manipulation"],
+              "answer": "A",
+              "language": "JavaScript",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which event occurs when a user clicks on an HTML element?",
+              "options": ["onmouseover", "onchange", "onclick", "onmouseclick"],
+              "answer": "C",
+              "language": "JavaScript",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which operator is used for strict equality comparison in JavaScript?",
+              "options": ["==", "===", "=", "equals()"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the difference between let and const in JavaScript?",
+              "options": ["let is block-scoped, const is function-scoped", "let variables can be reassigned, const variables cannot", "let is only for strings, const is for all data types", "let is deprecated, const is preferred"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the purpose of the 'use strict' directive?",
+              "options": ["To enable modern JavaScript features", "To catch common coding errors and prevent unsafe actions", "To improve performance", "To enable backwards compatibility"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is closure in JavaScript?",
+              "options": ["A function that has no access to outside variables", "A function that always returns the same value", "A function that has access to variables from its outer scope even after the outer function has finished execution", "A function that can only be used once"],
+              "answer": "C",
+              "language": "JavaScript",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the purpose of the 'this' keyword in JavaScript?",
+              "options": ["It refers to the current function", "It refers to the global object", "It refers to the object that the function is a property of", "It refers to the parent function"],
+              "answer": "C",
+              "language": "JavaScript",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which method creates a new array with the results of calling a function for each array element?",
+              "options": ["forEach()", "map()", "filter()", "reduce()"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the output of: console.log(typeof null);",
+              "options": ["null", "undefined", "object", "string"],
+              "answer": "C",
+              "language": "JavaScript",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the main difference between synchronous and asynchronous code in JavaScript?",
+              "options": ["Synchronous code is faster", "Asynchronous code waits for operations to complete before continuing", "Synchronous code executes in order while asynchronous code can run in parallel", "There is no difference"],
+              "answer": "C",
+              "language": "JavaScript",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is a Promise in JavaScript?",
+              "options": ["A function that always returns true", "A proxy for a value not necessarily known when the promise is created", "A reserved word for future JavaScript features", "A data structure similar to an array"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is event bubbling in JavaScript?",
+              "options": ["Creating multiple event listeners for the same event", "An event that propagates from the target element up through the DOM", "A technique to improve event handling performance", "A way to prevent default browser behavior"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What does the spread operator (...) do?",
+              "options": ["Multiplies values in an array", "Creates a shallow copy of an array or object", "Makes all elements in an array equal", "Filters an array based on conditions"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the time complexity of the Array.prototype.map() method?",
+              "options": ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+              "answer": "C",
+              "language": "JavaScript",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is a WeakMap in JavaScript?",
+              "options": ["A Map that can only store primitive values", "A Map with limited size", "A Map that allows its keys to be garbage collected", "A deprecated version of Map"],
+              "answer": "C",
+              "language": "JavaScript",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the purpose of the Symbol data type in JavaScript?",
+              "options": ["To create unique identifiers", "To represent mathematical symbols", "To improve code readability", "To encrypt sensitive data"],
+              "answer": "A",
+              "language": "JavaScript",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "Which pattern would you use to implement the Singleton pattern in modern JavaScript?",
+              "options": ["Class with private constructor", "Module pattern", "Prototype pattern", "Factory pattern"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the difference between the event loop in Node.js and browsers?",
+              "options": ["Node.js uses a single-threaded event loop, browsers use multiple threads", "Node.js event loop handles file I/O, browsers don't", "There is no difference", "Node.js doesn't have an event loop"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the purpose of a JavaScript Proxy?",
+              "options": ["To hide IP addresses", "To create objects with custom behavior for fundamental operations", "To optimize memory usage", "To connect to external APIs"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the difference between Object.create() and the constructor pattern?",
+              "options": ["Object.create() creates objects without executing constructor code", "Object.create() can only create empty objects", "Object.create() is slower", "There is no difference"],
+              "answer": "A",
+              "language": "JavaScript",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the purpose of the Intl object in JavaScript?",
+              "options": ["To handle integer calculations", "To provide language-sensitive string comparison, number formatting, and date and time formatting", "To create international links in web pages", "To check if a value is an integer"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "How do you implement memoization in JavaScript?",
+              "options": ["By using the memo() function", "By using closures to store previously calculated results", "By using the built-in memoize operator", "By saving results to localStorage"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is event delegation in JavaScript?",
+              "options": ["Assigning events to each element individually", "Using a single event listener on a parent element to manage events for all child elements", "Delegating event handling to the browser", "Creating custom events"],
+              "answer": "B",
+              "language": "JavaScript",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "Which HTML element is used to define the title of a document?",
+              "options": ["<header>", "<heading>", "<title>", "<h1>"],
+              "answer": "C",
+              "language": "HTML",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which attribute is used to specify a unique id for an HTML element?",
+              "options": ["unique", "id", "identifier", "class"],
+              "answer": "B",
+              "language": "HTML",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which HTML tag is used to create an unordered list?",
+              "options": ["<ol>", "<list>", "<ul>", "<dl>"],
+              "answer": "C",
+              "language": "HTML",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "How do you create a hyperlink in HTML?",
+              "options": ["<link href='url'>", "<a href='url'>link text</a>", "<hyperlink url='url'>", "<url>link text</url>"],
+              "answer": "B",
+              "language": "HTML",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which HTML element is used to create a table?",
+              "options": ["<table>", "<tab>", "<grid>", "<tb>"],
+              "answer": "A",
+              "language": "HTML",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which HTML element is used to specify a header for a document or section?",
+              "options": ["<head>", "<header>", "<top>", "<section>"],
+              "answer": "B",
+              "language": "HTML",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which HTML attribute specifies an alternate text for an image?",
+              "options": ["title", "alt", "description", "caption"],
+              "answer": "B",
+              "language": "HTML",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which HTML element is used to define important text?",
+              "options": ["<important>", "<b>", "<strong>", "<em>"],
+              "answer": "C",
+              "language": "HTML",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which doctype is correct for HTML5?",
+              "options": ["<!DOCTYPE html>", "<!DOCTYPE HTML5>", "<DOCTYPE html>", "<!DOCTYPE HTML PUBLIC>"],
+              "answer": "A",
+              "language": "HTML",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which HTML element is used to define a paragraph?",
+              "options": ["<p>", "<paragraph>", "<text>", "<para>"],
+              "answer": "A",
+              "language": "HTML",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the purpose of the 'data-*' attributes in HTML?",
+              "options": ["To store custom data private to the page or application", "To improve SEO rankings", "To create animation effects", "To define responsive behavior"],
+              "answer": "A",
+              "language": "HTML",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which HTML5 element should be used to mark up a main navigation block?",
+              "options": ["<navigation>", "<nav>", "<menu>", "<links>"],
+              "answer": "B",
+              "language": "HTML",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What does the 'required' attribute do in an input field?",
+              "options": ["Specifies that the input field is read-only", "Specifies that the input field must be filled out before submitting the form", "Makes the input field larger than normal", "Sends the form data to a new tab"],
+              "answer": "B",
+              "language": "HTML",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which HTML5 element is used to specify a footer for a document or section?",
+              "options": ["<bottom>", "<section>", "<footer>", "<end>"],
+              "answer": "C",
+              "language": "HTML",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the purpose of HTML5 localStorage?",
+              "options": ["To store data temporarily", "To store data with no expiration date", "To send data to a server", "To create local backups of websites"],
+              "answer": "B",
+              "language": "HTML",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which attribute is used to specify that an input field should be pre-filled with a certain value?",
+              "options": ["value", "pre", "placeholder", "default"],
+              "answer": "A",
+              "language": "HTML",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What does the 'srcset' attribute do?",
+              "options": ["Sets the source file for a script", "Specifies multiple sizes for the browser to choose from for responsive images", "Sets the source of an iframe", "Defines a set of source files for audio"],
+              "answer": "B",
+              "language": "HTML",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which HTML5 input type is used for picking a date and time?",
+              "options": ["date", "time", "datetime", "datetime-local"],
+              "answer": "D",
+              "language": "HTML",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the purpose of the <picture> element in HTML5?",
+              "options": ["To display a gallery of images", "To provide multiple sources for an image based on different conditions", "To create image captions", "To create a slideshow"],
+              "answer": "B",
+              "language": "HTML",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which HTML5 attribute is used to make form elements automatically get focus when the page loads?",
+              "options": ["default", "autofocus", "focus", "active"],
+              "answer": "B",
+              "language": "HTML",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the purpose of the 'rel' attribute in the 'link' tag with a value of 'preload'?",
+              "options": ["To define a relationship between documents", "To preload assets before they are needed to improve performance", "To reload the page automatically", "To link to external stylesheets"],
+              "answer": "B",
+              "language": "HTML",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "Which of the following is not a valid HTML5 semantic element?",
+              "options": ["<article>", "<summary>", "<container>", "<figure>"],
+              "answer": "C",
+              "language": "HTML",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the purpose of the 'defer' attribute in a script tag?",
+              "options": ["To delay execution until the page has finished parsing", "To prevent script execution entirely", "To make the script run faster", "To defer script loading to a service worker"],
+              "answer": "A",
+              "language": "HTML",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "Which HTML5 API is used for drag and drop functionality?",
+              "options": ["Gesture API", "Drag and Drop API", "Touch API", "Movement API"],
+              "answer": "B",
+              "language": "HTML",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the purpose of the 'sandbox' attribute in an iframe?",
+              "options": ["To style the iframe with a border", "To restrict the capabilities of the content in the iframe", "To allow the iframe to resize automatically", "To make the iframe load faster"],
+              "answer": "B",
+              "language": "HTML",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the significance of the 'crossorigin' attribute in a script tag?",
+              "options": ["It enables execution of scripts from different domains", "It specifies how the browser should handle CORS requests", "It prevents scripts from accessing cookies", "It cross-references scripts with each other"],
+              "answer": "B",
+              "language": "HTML",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "Which HTML feature allows you to specify a fallback image when a WebP image is not supported?",
+              "options": ["The fallback attribute", "The picture element with source elements", "The alt attribute", "The onerror event"],
+              "answer": "B",
+              "language": "HTML",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the purpose of the 'itemscope' attribute in HTML?",
+              "options": ["To define the scope of an item in a list", "To create scoped CSS styles", "To define an item in microdata", "To limit the visibility of an element"],
+              "answer": "C",
+              "language": "HTML",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "How can you improve accessibility in HTML forms?",
+              "options": ["By using the label element with a 'for' attribute matching the input's id", "By adding more input fields", "By using placeholder text instead of labels", "By using larger fonts"],
+              "answer": "A",
+              "language": "HTML",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the role of the 'preconnect' value in the 'rel' attribute?",
+              "options": ["To establish a connection to another origin", "To prevent connections to another origin", "To reconnect to a server after disconnection", "To verify connection security"],
+              "answer": "A",
+              "language": "HTML",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "Which CSS property is used to change the text color of an element?",
+              "options": ["text-color", "font-color", "color", "foreground"],
+              "answer": "C",
+              "language": "CSS",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "How do you add a background color to an element in CSS?",
+              "options": ["color: yellow;", "bg-color: yellow;", "background-color: yellow;", "background: yellow;"],
+              "answer": "C",
+              "language": "CSS",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which CSS property controls the text size?",
+              "options": ["text-size", "font-size", "text-style", "font-style"],
+              "answer": "B",
+              "language": "CSS",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "How do you select an element with the id 'demo' in CSS?",
+              "options": ["#demo", ".demo", "demo", "*demo"],
+              "answer": "A",
+              "language": "CSS",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "How do you select elements with the class name 'test' in CSS?",
+              "options": ["#test", ".test", "test", "*test"],
+              "answer": "B",
+              "language": "CSS",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which CSS property is used to add space between the borders and content?",
+              "options": ["spacing", "margin", "padding", "border-spacing"],
+              "answer": "C",
+              "language": "CSS",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "How do you make text bold in CSS?",
+              "options": ["font-weight: bold;", "text-style: bold;", "font: bold;", "style: bold;"],
+              "answer": "A",
+              "language": "CSS",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which property is used to change the font of an element?",
+              "options": ["font-style", "text-style", "font-family", "text-family"],
+              "answer": "C",
+              "language": "CSS",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "How do you display a border like this: 'solid red 1px'?",
+              "options": ["border: 1px solid red;", "border: solid red 1px;", "border: red 1px solid;", "border: red solid 1px;"],
+              "answer": "A",
+              "language": "CSS",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which CSS property controls the spacing between lines of text?",
+              "options": ["line-height", "spacing", "text-spacing", "line-spacing"],
+              "answer": "A",
+              "language": "CSS",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the CSS box model?",
+              "options": ["A design pattern for creating boxes", "A layout system for managing element dimensions including content, padding, border, and margin", "A way to create 3D boxes with CSS", "A method for aligning elements"],
+              "answer": "B",
+              "language": "CSS",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What does the 'z-index' property do in CSS?",
+              "options": ["Controls the transparency of an element", "Specifies the stack order of elements", "Sets the zoom level for an element", "Determines the horizontal position"],
+              "answer": "B",
+              "language": "CSS",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which CSS property would you use to create rounded corners?",
+              "options": ["corner-radius", "border-curve", "border-radius", "rounded-corners"],
+              "answer": "C",
+              "language": "CSS",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the purpose of the 'flexbox' layout in CSS?",
+              "options": ["To create flexible grids", "To design flexible responsive layout structures without using float or positioning", "To make text flexible in size", "To allow elements to flex their colors"],
+              "answer": "B",
+              "language": "CSS",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which pseudo-class is used to select an element when a user hovers over it?",
+              "options": [":hover", ":mouseenter", ":over", ":focus"],
+              "answer": "A",
+              "language": "CSS",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the difference between 'visibility: hidden' and 'display: none'?",
+              "options": ["They are the same", "'visibility: hidden' hides the element but still takes up space, 'display: none' removes it from the layout", "'visibility: hidden' removes the element from the layout, 'display: none' hides it but still takes up space", "There is no such property as 'visibility: hidden'"],
+              "answer": "B",
+              "language": "CSS",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What does the CSS property 'position: absolute' do?",
+              "options": ["Positions the element relative to the first non-static positioned ancestor", "Positions the element relative to the browser window", "Removes the element from the document flow", "Makes the element unmovable"],
+              "answer": "A",
+              "language": "CSS",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "How do you center an element horizontally in CSS?",
+              "options": ["margin: auto;", "align: center;", "text-align: center;", "position: center;"],
+              "answer": "A",
+              "language": "CSS",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is a CSS preprocessor?",
+              "options": ["A tool that processes CSS files before they are delivered to the browser", "A tool that optimizes CSS for better performance", "A browser extension for CSS", "A CSS framework"],
+              "answer": "A",
+              "language": "CSS",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which CSS property is used for creating a transition effect?",
+              "options": ["transition", "transform", "animation", "motion"],
+              "answer": "A",
+              "language": "CSS",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the purpose of CSS Grid Layout?",
+              "options": ["To create one-dimensional layouts", "To create two-dimensional grid-based layouts", "To create circular layouts", "To create animated layouts"],
+              "answer": "B",
+              "language": "CSS",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "Which CSS function is used to create a flexible length?",
+              "options": ["flex()", "calc()", "var()", "length()"],
+              "answer": "B",
+              "language": "CSS",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What are CSS custom properties (variables)?",
+              "options": ["Properties that can be reused throughout a document", "Properties that only work in custom elements", "Properties that are browser-specific", "Properties that are automatically generated"],
+              "answer": "A",
+              "language": "CSS",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the purpose of the 'will-change' property in CSS?",
+              "options": ["To indicate elements that will be animated", "To prepare the browser for changes to an element to improve performance", "To prevent elements from changing", "To automatically update elements"],
+              "answer": "B",
+              "language": "CSS",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is a CSS containment?",
+              "options": ["A way to contain floats", "A property that isolates an element from the rest of the document", "A method for containing overflow", "A technique for responsive design"],
+              "answer": "B",
+              "language": "CSS",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the purpose of the ':root' pseudo-class in CSS?",
+              "options": ["To select the root element of the document", "To create root-level variables", "To apply styles to all elements", "To target the top-level elements"],
+              "answer": "A",
+              "language": "CSS",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the 'aspect-ratio' property used for?",
+              "options": ["To specify the ratio between width and height", "To control image quality", "To define the height of an element", "To set the width of an element"],
+              "answer": "A",
+              "language": "CSS",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What are CSS Houdini APIs used for?",
+              "options": ["To create magic-like animations", "To allow developers to extend CSS by hooking into the styling and layout process", "To hide CSS from certain browsers", "To optimize CSS performance"],
+              "answer": "B",
+              "language": "CSS",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What does the 'clip-path' property do in CSS?",
+              "options": ["Clips content that exceeds the element's dimensions", "Creates a clipping region to determine what part of an element is visible", "Clips background images to fit an element", "Clips text that overflows"],
+              "answer": "B",
+              "language": "CSS",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the main difference between CSS animations and transitions?",
+              "options": ["Animations are faster than transitions", "Transitions can only affect one property", "Animations can have multiple keyframes and run automatically, transitions need a trigger and go from one state to another", "There is no difference"],
+              "answer": "C",
+              "language": "CSS",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "Which SQL statement is used to extract data from a database?",
+              "options": ["GET", "OPEN", "EXTRACT", "SELECT"],
+              "answer": "D",
+              "language": "SQL",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which SQL clause is used to filter records?",
+              "options": ["FILTER", "WHERE", "HAVING", "CONDITION"],
+              "answer": "B",
+              "language": "SQL",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which SQL statement is used to update data in a database?",
+              "options": ["MODIFY", "SAVE", "UPDATE", "CHANGE"],
+              "answer": "C",
+              "language": "SQL",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which SQL statement is used to delete data from a database?",
+              "options": ["REMOVE", "DELETE", "COLLAPSE", "DROP"],
+              "answer": "B",
+              "language": "SQL",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which SQL statement is used to insert new data in a database?",
+              "options": ["ADD", "CREATE", "INSERT", "NEW"],
+              "answer": "C",
+              "language": "SQL",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "How do you select all columns from a table named 'Customers'?",
+              "options": ["SELECT [ALL] FROM Customers;", "SELECT *.Customers;", "SELECT Customers.*;", "SELECT * FROM Customers;"],
+              "answer": "D",
+              "language": "SQL",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which SQL operator is used to search for a specified pattern in a column?",
+              "options": ["LIKE", "FIND", "SEARCH", "GET"],
+              "answer": "A",
+              "language": "SQL",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which SQL keyword is used to sort the result-set?",
+              "options": ["SORT BY", "ORDER", "ORDER BY", "ARRANGE BY"],
+              "answer": "C",
+              "language": "SQL",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which SQL function is used to return the number of records in a result set?",
+              "options": ["SUM()", "COUNT()", "NUMBER()", "TOTAL()"],
+              "answer": "B",
+              "language": "SQL",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "Which SQL statement is used to create a new table?",
+              "options": ["CREATE TABLE", "BUILD TABLE", "GENERATE TABLE", "NEW TABLE"],
+              "answer": "A",
+              "language": "SQL",
+              "difficulty": "Basic"
+            },
+            {
+              "question": "What is the purpose of the GROUP BY statement in SQL?",
+              "options": ["To group rows with same values", "To join tables together", "To filter records", "To sort the result"],
+              "answer": "A",
+              "language": "SQL",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is a foreign key?",
+              "options": ["A key from a foreign country", "A primary key in one table that's used as a reference in another table", "A unique key for each record", "A key that's not used frequently"],
+              "answer": "B",
+              "language": "SQL",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which statement is used to add a column to a table?",
+              "options": ["MODIFY TABLE", "EDIT TABLE", "ALTER TABLE", "UPDATE TABLE"],
+              "answer": "C",
+              "language": "SQL",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What does the HAVING clause do in SQL?",
+              "options": ["Filters records before grouping", "Adds additional tables to the query", "Filters groups based on aggregate conditions", "Changes the column names in the result"],
+              "answer": "C",
+              "language": "SQL",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the difference between UNION and UNION ALL?",
+              "options": ["UNION removes duplicates, UNION ALL keeps duplicates", "UNION combines rows, UNION ALL combines columns", "UNION works for only two tables, UNION ALL works for multiple tables", "There is no difference"],
+              "answer": "A",
+              "language": "SQL",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which SQL join returns rows when there is a match in one of the tables?",
+              "options": ["INNER JOIN", "FULL JOIN", "LEFT JOIN", "RIGHT JOIN"],
+              "answer": "C",
+              "language": "SQL",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is a stored procedure?",
+              "options": ["A way to store SQL queries in a file", "A prepared SQL code that can be saved and reused", "A method to store query results", "A feature to store database backups"],
+              "answer": "B",
+              "language": "SQL",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is the purpose of the SQL COALESCE function?",
+              "options": ["To merge two tables", "To return the first non-null expression in a list", "To count the number of coalescences", "To combine multiple columns"],
+              "answer": "B",
+              "language": "SQL",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "Which constraint ensures that all values in a column are different?",
+              "options": ["PRIMARY KEY", "UNIQUE", "CHECK", "FOREIGN KEY"],
+              "answer": "B",
+              "language": "SQL",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is an SQL VIEW?",
+              "options": ["A visual representation of a database", "A virtual table based on the result-set of an SQL statement", "A graphical user interface for databases", "An index for frequently queried columns"],
+              "answer": "B",
+              "language": "SQL",
+              "difficulty": "Intermediate"
+            },
+            {
+              "question": "What is a transaction in SQL?",
+              "options": ["A financial operation in a banking database", "A unit of work performed against a database", "The process of transferring data between tables", "A type of join operation"],
+              "answer": "B",
+              "language": "SQL",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the purpose of database normalization?",
+              "options": ["To increase database performance", "To organize data to reduce redundancy and improve data integrity", "To create backup copies of the database", "To simplify complex queries"],
+              "answer": "B",
+              "language": "SQL",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is a CTE (Common Table Expression) in SQL?",
+              "options": ["A temporary named result set created from a simple query", "A type of constraint", "A method to encrypt data", "A special type of index"],
+              "answer": "A",
+              "language": "SQL",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the difference between a clustered and non-clustered index?",
+              "options": ["Clustered index determines physical order of data, non-clustered creates a separate structure", "Clustered is faster, non-clustered is slower", "Clustered works on primary keys only, non-clustered works on any column", "There is no difference"],
+              "answer": "A",
+              "language": "SQL",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is a deadlock in database systems?",
+              "options": ["When a query never completes execution", "When two or more transactions are waiting for each other to release locks", "When a database becomes corrupted", "When all connections to a database fail"],
+              "answer": "B",
+              "language": "SQL",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is database sharding?",
+              "options": ["Breaking a database into smaller, faster, more manageable pieces", "Encrypting sensitive database information", "Creating multiple copies of a database for backup", "Merging multiple databases into one"],
+              "answer": "A",
+              "language": "SQL",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is a self-join?",
+              "options": ["A join that combines a table with itself", "A join that doesn't require any conditions", "A join that works without foreign keys", "A join that automatically updates itself"],
+              "answer": "A",
+              "language": "SQL",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is the purpose of the EXPLAIN statement in SQL?",
+              "options": ["To document SQL code", "To show how a query is executed and analyze its performance", "To translate SQL to human language", "To validate SQL syntax"],
+              "answer": "B",
+              "language": "SQL",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What are database isolation levels?",
+              "options": ["Security levels for database access", "The degree to which transactions are isolated from each other", "Different levels of database clustering", "Types of database backup strategies"],
+              "answer": "B",
+              "language": "SQL",
+              "difficulty": "Advanced"
+            },
+            {
+              "question": "What is a database trigger?",
+              "options": ["A scheduled database backup", "A special stored procedure that runs automatically in response to database events", "A method to optimize query performance", "A tool to refresh database connections"],
+              "answer": "B",
+              "language": "SQL",
+              "difficulty": "Advanced"
+            },
+            
+  {
+    "question": "Which function correctly reverses a string in JavaScript?",
+    "options": [
+      "function reverseString(str) { return str.reverse(); }",
+      "function reverseString(str) { return str.split('').reverse().join(''); }",
+      "function reverseString(str) { return str.flip(); }",
+      "function reverseString(str) { return str.charAt().reverse(); }"
+    ],
+    "answer": "B",
+    "language": "JavaScript",
+    "difficulty": "Basic"
+  },
+  {
+    "question": "Which Python code correctly finds the maximum value in a list?",
+    "options": [
+      "def find_max(lst): return maximum(lst)",
+      "def find_max(lst): return lst.largest()",
+      "def find_max(lst): return max(lst)",
+      "def find_max(lst): return lst.max()"
+    ],
+    "answer": "C",
+    "language": "Python",
+    "difficulty": "Basic"
+  },
+  {
+    "question": "Which Java code correctly checks if a number is prime?",
+    "options": [
+      "boolean isPrime(int n) {\n  if (n <= 1) return false;\n  for (int i = 2; i <= Math.sqrt(n); i++) {\n    if (n % i == 0) return false;\n  }\n  return true;\n}",
+      "boolean isPrime(int n) {\n  return n.isPrime();\n}",
+      "boolean isPrime(int n) {\n  for (int i = 0; i < n; i++) {\n    if (n % i == 0) return true;\n  }\n  return false;\n}",
+      "boolean isPrime(int n) {\n  return Math.checkPrime(n);\n}"
+    ],
+    "answer": "A",
+    "language": "Java",
+    "difficulty": "Basic"
+  },
+  {
+    "question": "Which SQL query correctly joins two tables and filters results?",
+    "options": [
+      "SELECT * FROM employees JOIN departments WHERE employees.dept_id = departments.id;",
+      "SELECT * FROM employees, departments WHERE employees.dept_id = departments.id;",
+      "SELECT * FROM employees COMBINE departments ON employees.dept_id = departments.id;",
+      "SELECT * FROM employees JOIN departments ON employees.dept_id = departments.id;"
+    ],
+    "answer": "D",
+    "language": "SQL",
+    "difficulty": "Basic"
+  },
+  {
+    "question": "Which CSS code correctly centers an element horizontally and vertically using flexbox?",
+    "options": [
+      ".container { display: flex; justify-content: center; align-items: center; height: 100%; }",
+      ".container { display: block; margin: auto; position: center; }",
+      ".container { position: absolute; center: true; }",
+      ".container { display: flex; text-align: center; vertical-align: center; }"
+    ],
+    "answer": "A",
+    "language": "CSS",
+    "difficulty": "Basic"
+  },
+  {
+    "question": "Which JavaScript function correctly removes duplicates from an array?",
+    "options": [
+      "function removeDuplicates(arr) {\n  return arr.unique();\n}",
+      "function removeDuplicates(arr) {\n  return arr.filter((item, index) => arr.indexOf(item) === index);\n}",
+      "function removeDuplicates(arr) {\n  return arr.removeDuplicates();\n}",
+      "function removeDuplicates(arr) {\n  return arr.distinct();\n}"
+    ],
+    "answer": "B",
+    "language": "JavaScript",
+    "difficulty": "Basic"
+  },
+  {
+    "question": "Which HTML code correctly creates a form with input validation?",
+    "options": [
+      "<form>\n  <input type=\"email\" required />\n  <button type=\"submit\">Submit</button>\n</form>",
+      "<form>\n  <input validate=\"email\" />\n  <button>Submit</button>\n</form>",
+      "<form validation=\"true\">\n  <input type=\"email\" />\n  <button>Submit</button>\n</form>",
+      "<form>\n  <input type=\"text\" check=\"email\" />\n  <submit>Submit</submit>\n</form>"
+    ],
+    "answer": "A",
+    "language": "HTML",
+    "difficulty": "Basic"
+  },
+  {
+    "question": "Which C code correctly swaps two integers using pointers?",
+    "options": [
+      "void swap(int* a, int* b) {\n  int temp = *a;\n  *a = *b;\n  *b = temp;\n}",
+      "void swap(int a, int b) {\n  int temp = a;\n  a = b;\n  b = temp;\n}",
+      "void swap(int* a, int* b) {\n  a = b;\n  b = a;\n}",
+      "void swap(int& a, int& b) {\n  swap(a, b);\n}"
+    ],
+    "answer": "A",
+    "language": "C",
+    "difficulty": "Basic"
+  },
+  {
+    "question": "Which Python code correctly reads a file line by line?",
+    "options": [
+      "def read_file(filename):\n  file = open(filename)\n  return file.readall()",
+      "def read_file(filename):\n  with open(filename, 'r') as file:\n    return file.readlines()",
+      "def read_file(filename):\n  return File.read(filename).lines()",
+      "def read_file(filename):\n  return Python.readFile(filename)"
+    ],
+    "answer": "B",
+    "language": "Python",
+    "difficulty": "Basic"
+  },
+  {
+    "question": "Which React code correctly creates a functional component with state?",
+    "options": [
+      "function Counter() {\n  const [count, setCount] = React.useState(0);\n  return (\n    <button onClick={() => setCount(count + 1)}>\n      Count: {count}\n    </button>\n  );\n}",
+      "function Counter() {\n  let count = 0;\n  return (\n    <button onClick={() => count++}>\n      Count: {count}\n    </button>\n  );\n}",
+      "class Counter extends React.Component {\n  render() {\n    let count = 0;\n    return (\n      <button onClick={() => count++}>\n        Count: {count}\n      </button>\n    );\n  }\n}",
+      "function Counter() {\n  const count = React.state(0);\n  return (\n    <button onClick={count.increment()}>\n      Count: {count.value}\n    </button>\n  );\n}"
+    ],
+    "answer": "A",
+    "language": "JavaScript",
+    "difficulty": "Basic" 
+  },
+  {
+    "question": "Which JavaScript function correctly implements binary search on a sorted array?",
+    "options": [
+      "function binarySearch(arr, target) {\n  return arr.binarySearch(target);\n}",
+      "function binarySearch(arr, target) {\n  arr.sort();\n  return arr.indexOf(target);\n}",
+      "function binarySearch(arr, target) {\n  let left = 0;\n  let right = arr.length - 1;\n  while (left <= right) {\n    const mid = Math.floor((left + right) / 2);\n    if (arr[mid] === target) return mid;\n    if (arr[mid] < target) left = mid + 1;\n    else right = mid - 1;\n  }\n  return -1;\n}",
+      "function binarySearch(arr, target) {\n  for (let i = 0; i < arr.length; i++) {\n    if (arr[i] === target) return i;\n  }\n  return -1;\n}"
+    ],
+    "answer": "C",
+    "language": "JavaScript",
+    "difficulty": "Intermediate"
+  },
+  {
+    "question": "Which Python code correctly implements a decorator?",
+    "options": [
+      "def my_decorator(func):\n  def wrapper(*args, **kwargs):\n    print('Before function')\n    result = func(*args, **kwargs)\n    print('After function')\n    return result\n  return wrapper",
+      "def my_decorator(func):\n  print('Before function')\n  func()\n  print('After function')\n  return func",
+      "class my_decorator:\n  def __init__(self, func):\n    self.func = func\n    self.decorate()\n  \n  def decorate(self):\n    print('Decorated')",
+      "@decorator\ndef my_function():\n  pass"
+    ],
+    "answer": "A",
+    "language": "Python",
+    "difficulty": "Intermediate"
+  },
+  {
+    "question": "Which Java code correctly implements a thread-safe singleton pattern?",
+    "options": [
+      "public class Singleton {\n  private static Singleton instance;\n  private Singleton() {}\n  public static Singleton getInstance() {\n    if (instance == null) {\n      instance = new Singleton();\n    }\n    return instance;\n  }\n}",
+      "public class Singleton {\n  private static volatile Singleton instance;\n  private Singleton() {}\n  public static Singleton getInstance() {\n    if (instance == null) {\n      synchronized (Singleton.class) {\n        if (instance == null) {\n          instance = new Singleton();\n        }\n      }\n    }\n    return instance;\n  }\n}",
+      "public class Singleton {\n  private Singleton() {}\n  public static Singleton getInstance() {\n    return new Singleton();\n  }\n}",
+      "public class Singleton {\n  private static final Singleton INSTANCE = null;\n  private Singleton() {}\n  public static Singleton getInstance() {\n    if (INSTANCE == null) {\n      INSTANCE = new Singleton();\n    }\n    return INSTANCE;\n  }\n}"
+    ],
+    "answer": "B",
+    "language": "Java",
+    "difficulty": "Intermediate"
+  },
+  {
+    "question": "Which SQL query correctly performs a paginated select with proper indexing considerations?",
+    "options": [
+      "SELECT * FROM products ORDER BY created_at DESC LIMIT 10 OFFSET 30;",
+      "SELECT * FROM products ORDER BY created_at DESC LIMIT 30, 10;",
+      "SELECT * FROM products WHERE id > (SELECT id FROM products ORDER BY id LIMIT 1 OFFSET 30) ORDER BY id LIMIT 10;",
+      "SELECT p.* FROM products p JOIN (SELECT id FROM products ORDER BY created_at DESC LIMIT 30, 10) AS filter ON p.id = filter.id;"
+    ],
+    "answer": "C",
+    "language": "SQL",
+    "difficulty": "Intermediate"
+  },
+  {
+    "question": "Which JavaScript code correctly debounces a function?",
+    "options": [
+      "function debounce(func, wait) {\n  let timeout;\n  return function(...args) {\n    clearTimeout(timeout);\n    timeout = setTimeout(() => func.apply(this, args), wait);\n  };\n}",
+      "function debounce(func, wait) {\n  return function(...args) {\n    setTimeout(() => func.apply(this, args), wait);\n  };\n}",
+      "function debounce(func, wait) {\n  let lastCall = 0;\n  return function(...args) {\n    if (Date.now() - lastCall > wait) {\n      lastCall = Date.now();\n      func.apply(this, args);\n    }\n  };\n}",
+      "function debounce(func) {\n  func.debounce();\n  return func;\n}"
+    ],
+    "answer": "A",
+    "language": "JavaScript",
+    "difficulty": "Intermediate"
+  },
+  {
+    "question": "Which C++ code correctly implements a function template?",
+    "options": [
+      "template void swap(T& a, T& b) {\n  T temp = a;\n  a = b;\n  b = temp;\n}",
+      "template<typename T>\nvoid swap(T& a, T& b) {\n  T temp = a;\n  a = b;\n  b = temp;\n}",
+      "function<T> void swap(T& a, T& b) {\n  T temp = a;\n  a = b;\n  b = temp;\n}",
+      "void<T> swap(T& a, T& b) {\n  T temp = a;\n  a = b;\n  b = temp;\n}"
+    ],
+    "answer": "B",
+    "language": "C++",
+    "difficulty": "Intermediate"
+  },
+  {
+    "question": "Which Python code correctly uses a generator to find Fibonacci numbers?",
+    "options": [
+      "def fibonacci():\n  a, b = 0, 1\n  while True:\n    yield a\n    a, b = b, a + b",
+      "def fibonacci():\n  a, b = 0, 1\n  result = []\n  while True:\n    result.append(a)\n    a, b = b, a + b\n  return result",
+      "def fibonacci():\n  a, b = 0, 1\n  while True:\n    return a\n    a, b = b, a + b",
+      "def fibonacci():\n  result = [0, 1]\n  for i in range(2, 100):\n    result.append(result[i-1] + result[i-2])\n  return result"
+    ],
+    "answer": "A",
+    "language": "Python",
+    "difficulty": "Intermediate"
+  },
+  {
+    "question": "Which React code correctly implements error boundaries?",
+    "options": [
+      "function ErrorBoundary({ children }) {\n  try {\n    return children;\n  } catch (error) {\n    return <h1>Something went wrong.</h1>;\n  }\n}",
+      "class ErrorBoundary extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = { hasError: false };\n  }\n  static getDerivedStateFromError(error) {\n    return { hasError: true };\n  }\n  render() {\n    if (this.state.hasError) {\n      return <h1>Something went wrong.</h1>;\n    }\n    return this.props.children;\n  }\n}",
+      "const ErrorBoundary = ({ children }) => {\n  const [hasError, setHasError] = useState(false);\n  if (hasError) {\n    return <h1>Something went wrong.</h1>;\n  }\n  return children;\n}",
+      "class ErrorBoundary extends React.Component {\n  componentDidCatch(error) {\n    console.log(error);\n  }\n  render() {\n    return this.props.children;\n  }\n}"
+    ],
+    "answer": "B",
+    "language": "JavaScript",
+    "difficulty": "Intermediate"
+  },
+  {
+    "question": "Which algorithm implementation correctly performs breadth-first search on a graph?",
+    "options": [
+      "function bfs(graph, start) {\n  const visited = new Set();\n  const queue = [start];\n  visited.add(start);\n  \n  while (queue.length > 0) {\n    const vertex = queue.shift();\n    console.log(vertex);\n    \n    for (const neighbor of graph[vertex]) {\n      if (!visited.has(neighbor)) {\n        visited.add(neighbor);\n        queue.push(neighbor);\n      }\n    }\n  }\n}",
+      "function bfs(graph, start) {\n  const visited = new Set();\n  \n  function traverse(vertex) {\n    visited.add(vertex);\n    console.log(vertex);\n    \n    for (const neighbor of graph[vertex]) {\n      if (!visited.has(neighbor)) {\n        traverse(neighbor);\n      }\n    }\n  }\n  \n  traverse(start);\n}",
+      "function bfs(graph, start) {\n  for (const vertex in graph) {\n    console.log(vertex);\n  }\n}",
+      "function bfs(graph, start) {\n  const stack = [start];\n  const visited = new Set();\n  \n  while (stack.length > 0) {\n    const vertex = stack.pop();\n    if (!visited.has(vertex)) {\n      visited.add(vertex);\n      console.log(vertex);\n      for (const neighbor of graph[vertex]) {\n        stack.push(neighbor);\n      }\n    }\n  }\n}"
+    ],
+    "answer": "A",
+    "language": "JavaScript",
+    "difficulty": "Intermediate"
+  },
+  {
+    "question": "Which algorithm implementation correctly balances a binary search tree?",
+    "options": [
+      "function balance(tree) {\n  tree.sort();\n  return tree;\n}",
+      "function balance(root) {\n  if (!root) return null;\n  const nodes = [];\n  \n  function inOrder(node) {\n    if (!node) return;\n    inOrder(node.left);\n    nodes.push(node.val);\n    inOrder(node.right);\n  }\n  \n  function buildBalanced(start, end) {\n    if (start > end) return null;\n    const mid = Math.floor((start + end) / 2);\n    const node = { val: nodes[mid], left: null, right: null };\n    node.left = buildBalanced(start, mid - 1);\n    node.right = buildBalanced(mid + 1, end);\n    return node;\n  }\n  \n  inOrder(root);\n  return buildBalanced(0, nodes.length - 1);\n}",
+      "function balance(root) {\n  root.balance();\n  return root;\n}",
+      "function balance(root) {\n  for (let node of root) {\n    if (node.left && node.right) {\n      node.balanced = true;\n    }\n  }\n  return root;\n}"
+    ],
+    "answer": "B",
+    "language": "JavaScript",
+    "difficulty": "Advanced"
+  },
+  {
+    "question": "Which Python code correctly implements a thread-safe producer-consumer pattern?",
+    "options": [
+      "def producer_consumer():\n  queue = []\n  def producer():\n    for i in range(10):\n      queue.append(i)\n  def consumer():\n    while queue:\n      item = queue.pop(0)\n      print(item)\n  producer()\n  consumer()",
+      "import threading\nimport queue\n\ndef producer_consumer():\n  q = queue.Queue()\n  \n  def producer():\n    for i in range(10):\n      q.put(i)\n  \n  def consumer():\n    while True:\n      try:\n        item = q.get(block=False)\n        print(item)\n        q.task_done()\n      except queue.Empty:\n        break\n  \n  t1 = threading.Thread(target=producer)\n  t2 = threading.Thread(target=consumer)\n  \n  t1.start()\n  t1.join()\n  t2.start()\n  t2.join()",
+      "def producer_consumer():\n  shared_resource = []\n  for i in range(10):\n    # Producer\n    shared_resource.append(i)\n    # Consumer\n    print(shared_resource.pop(0))",
+      "import threading\ndef producer_consumer():\n  data = []\n  def producer():\n    for i in range(10):\n      data.append(i)\n  def consumer():\n    for i in range(10):\n      print(data[i])\n  threading.Thread(target=producer).start()\n  threading.Thread(target=consumer).start()"
+    ],
+    "answer": "B",
+    "language": "Python",
+    "difficulty": "Advanced"
+  },
+  {
+    "question": "Which SQL query correctly uses a window function for complex analysis?",
+    "options": [
+      "SELECT department, employee_name, salary, AVG(salary) OVER() as avg_salary FROM employees;",
+      "SELECT department, employee_name, salary, AVG(salary) as avg_salary FROM employees GROUP BY department;",
+      "SELECT department, employee_name, salary,\n  AVG(salary) OVER(PARTITION BY department) as dept_avg,\n  salary - AVG(salary) OVER(PARTITION BY department) as diff_from_dept_avg,\n  RANK() OVER(PARTITION BY department ORDER BY salary DESC) as dept_rank\nFROM employees;",
+      "SELECT department, employee_name, salary, (SELECT AVG(salary) FROM employees e2 WHERE e2.department = e1.department) as dept_avg FROM employees e1;"
+    ],
+    "answer": "C",
+    "language": "SQL",
+    "difficulty": "Advanced"
+  },
+  {
+    "question": "Which Go code correctly implements a concurrent worker pool?",
+    "options": [
+      "func workerPool() {\n  for i := 0; i < 10; i++ {\n    go func() {\n      // Do work\n    }()\n  }\n}",
+      "func workerPool(numJobs int, numWorkers int) {\n  jobs := make(chan int, numJobs)\n  results := make(chan int, numJobs)\n  \n  for w := 1; w <= numWorkers; w++ {\n    go worker(w, jobs, results)\n  }\n  \n  for j := 1; j <= numJobs; j++ {\n    jobs <- j\n  }\n  close(jobs)\n  \n  for a := 1; a <= numJobs; a++ {\n    <-results\n  }\n}\n\nfunc worker(id int, jobs <-chan int, results chan<- int) {\n  for j := range jobs {\n    // Do work\n    results <- j * 2\n  }\n}",
+      "func workerPool() {\n  var wg sync.WaitGroup\n  for i := 0; i < 10; i++ {\n    wg.Add(1)\n    go func() {\n      defer wg.Done()\n      // Do work\n    }()\n  }\n  wg.Wait()\n}",
+      "func workerPool(jobs []int) []int {\n  results := make([]int, len(jobs))\n  for i, job := range jobs {\n    results[i] = processJob(job)\n  }\n  return results\n}"
+    ],
+    "answer": "B",
+    "language": "Go",
+    "difficulty": "Advanced"
+  },
+  {
+    "question": "Which Rust code correctly implements a memory-safe linked list?",
+    "options": [
+      "struct Node {\n  value: i32,\n  next: *mut Node,\n}\n\nstruct LinkedList {\n  head: *mut Node,\n}\n\nimpl LinkedList {\n  fn new() -> Self {\n    LinkedList { head: std::ptr::null_mut() }\n  }\n}",
+      "struct Node {\n  value: i32,\n  next: Option<Box<Node>>,\n}\n\nstruct LinkedList {\n  head: Option<Box<Node>>,\n}\n\nimpl LinkedList {\n  fn new() -> Self {\n    LinkedList { head: None }\n  }\n}",
+      "struct Node {\n  value: i32,\n  next: Option<&Node>,\n}\n\nstruct LinkedList {\n  head: Option<Node>,\n}\n\nimpl LinkedList {\n  fn new() -> Self {\n    LinkedList { head: None }\n  }\n}",
+      "use std::rc::Rc;\nuse std::cell::RefCell;\n\ntype Link<T> = Option<Rc<RefCell<Node<T>>>>;\n\nstruct Node<T> {\n  value: T,\n  next: Link<T>,\n  prev: Link<T>,\n}\n\nstruct LinkedList<T> {\n  head: Link<T>,\n  tail: Link<T>,\n}\n\nimpl<T> LinkedList<T> {\n  fn new() -> Self {\n    LinkedList { head: None, tail: None }\n  }\n}"
+    ],
+    "answer": "D",
+    "language": "Rust",
+    "difficulty": "Advanced"
+  },
+  {
+    "question": "Which TypeScript code correctly implements a generic type-safe function?",
+    "options": [
+      "function getProperty(obj: any, key: any) {\n  return obj[key];\n}",
+      "function getProperty<T>(obj: T, key: string) {\n  return obj[key];\n}",
+      "function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {\n  return obj[key];\n}",
+      "function getProperty<T extends object>(obj: T, key: string): any {\n  return (obj as any)[key];\n}"
+    ],
+    "answer": "C",
+    "language": "TypeScript",
+    "difficulty": "Advanced"
+  },
+  {
+    "question": "Which algorithm correctly implements a B-tree insertion?",
+    "options": [
+      "function insert(value, root) {\n  if (!root) return { value, left: null, right: null };\n  if (value < root.value) {\n    root.left = insert(value, root.left);\n  } else {\n    root.right = insert(value, root.right);\n  }\n  return root;\n}",
+      "function insert(value, tree) {\n  tree.push(value);\n  tree.sort();\n  return tree;\n}",
+      "class BTree {\n  constructor(t) {\n    this.root = null;\n    this.t = t; // Minimum degree\n  }\n\n  insert(k) {\n    if (this.root == null) {\n      this.root = new BTreeNode(this.t, true);\n      this.root.keys[0] = k;\n      this.root.n = 1;\n    } else {\n      if (this.root.n == 2 * this.t - 1) {\n        let s = new BTreeNode(this.t, false);\n        s.children[0] = this.root;\n        s.splitChild(0, this.root);\n        let i = 0;\n        if (s.keys[0] < k) i++;\n        s.children[i].insertNonFull(k);\n        this.root = s;\n      } else {\n        this.root.insertNonFull(k);\n      }\n    }\n  }\n}",
+      "function insert(value, btree) {\n  btree.add(value);\n  return btree;\n}"
+    ],
+    "answer": "C",
+    "language": "JavaScript",
+    "difficulty": "Advanced"
+  },
+  {
+    "question": "Which C code correctly implements a memory-efficient bloom filter?",
+    "options": [
+      "typedef struct {\n  size_t size;\n  unsigned char *bits;\n} BloomFilter;\n\nBloomFilter *bloom_create(size_t size) {\n  BloomFilter *filter = malloc(sizeof(BloomFilter));\n  filter->size = size;\n  filter->bits = calloc((size + 7) / 8, 1);\n  return filter;\n}\n\nvoid bloom_add(BloomFilter *filter, const char *item) {\n  unsigned int hash1 = hash_function1(item) % filter->size;\n  unsigned int hash2 = hash_function2(item) % filter->size;\n  unsigned int hash3 = hash_function3(item) % filter->size;\n  \n  filter->bits[hash1 / 8] |= (1 << (hash1 % 8));\n  filter->bits[hash2 / 8] |= (1 << (hash2 % 8));\n  filter->bits[hash3 / 8] |= (1 << (hash3 % 8));\n}",
+      "struct BloomFilter {\n  int size;\n  bool *data;\n};\n\nBloomFilter createFilter(int size) {\n  BloomFilter filter;\n  filter.size = size;\n  filter.data = new bool[size];\n  return filter;\n}",
+      "#define FILTER_SIZE 1024\nint filter[FILTER_SIZE] = {0};\n\nvoid add(char *item) {\n  int index = hash(item) % FILTER_SIZE;\n  filter[index] = 1;\n}",
+      "class BloomFilter {\n  constructor(size) {\n    this.size = size;\n    this.filter = new Array(size).fill(0);\n  }\n  \n  add(item) {\n    const index = this.hash(item);\n    this.filter[index] = 1;\n  }\n}"
+    ],
+    "answer": "A",
+    "language": "C",
+    "difficulty": "Advanced"
+  },
+  {
+    "question": "Write a function to check if a number is even or odd.",
+    "options": [
+      "function checkEvenOdd(num) {\n  return num % 2 === 0 ? 'Even' : 'Odd';\n}",
+      "function checkEvenOdd(num) {\n  return num / 2 === 0 ? 'Even' : 'Odd';\n}",
+      "function checkEvenOdd(num) {\n  return num % 2 == 1 ? 'Even' : 'Odd';\n}",
+      "function checkEvenOdd(num) {\n  if(num % 2) {\n    return 'Even';\n  } else {\n    return 'Odd';\n  }\n}"
+    ],
+    "answer": "A",
+    "language": "JavaScript",
+    "difficulty": "Basic"
+  },
+  {
+    "question": "Which function correctly checks if a number is a palindrome?",
+    "options": [
+      "function isPalindrome(num) {\n  return num.toString() === num.toString().split('').reverse().join('');\n}",
+      "function isPalindrome(num) {\n  return String(num) === String(num).reverse();\n}",
+      "function isPalindrome(num) {\n  let str = num + '';\n  let rev = '';\n  for(let i = str.length-1; i >= 0; i--) {\n    rev += str[i];\n  }\n  return str === rev;\n}",
+      "function isPalindrome(num) {\n  let str = num.toString();\n  for(let i = 0; i < str.length / 2; i++) {\n    if(str[i] !== str[str.length-1-i]) {\n      return true;\n    }\n  }\n  return false;\n}"
+    ],
+    "answer": "A",
+    "language": "JavaScript",
+    "difficulty": "Intermediate"
+  },
+  {
+    "question": "Which function correctly determines if a number is an Armstrong number? (An Armstrong number is one where the sum of each digit raised to the power of the number of digits equals the original number. E.g., 153 = 1³ + 5³ + 3³)",
+    "options": [
+      "function isArmstrong(num) {\n  const digits = String(num).split('');\n  const power = digits.length;\n  const sum = digits.reduce((acc, digit) => acc + Math.pow(parseInt(digit), power), 0);\n  return sum === num;\n}",
+      "function isArmstrong(num) {\n  const digits = num.toString();\n  let sum = 0;\n  for(let i = 0; i < digits.length; i++) {\n    sum += digits[i] ** digits.length;\n  }\n  return sum === num;\n}",
+      "function isArmstrong(num) {\n  const digits = String(num);\n  const power = digits.length;\n  let sum = 0;\n  for(let i = 0; i < power; i++) {\n    sum += Math.pow(parseInt(digits[i]), power);\n  }\n  return sum === num;\n}",
+      "function isArmstrong(num) {\n  let sum = 0;\n  let temp = num;\n  const digits = num.toString().length;\n  while(temp > 0) {\n    let remainder = temp % 10;\n    sum += remainder ** digits;\n    temp = parseInt(temp / 10);\n  }\n  return sum === num;\n}"
+    ],
+    "answer": "C",
+    "language": "JavaScript",
+    "difficulty": "Advanced"
+  },
+  {
+    "question": "Which Python function correctly finds the sum of all even numbers in a list?",
+    "options": [
+      "def sum_even(numbers):\n  return sum(num for num in numbers if num % 2 == 0)",
+      "def sum_even(numbers):\n  return sum([x for x in numbers if x % 2 == 0])",
+      "def sum_even(numbers):\n  total = 0\n  for num in numbers:\n    if num % 2 == 0:\n      total += num\n  return total",
+      "All of the above"
+    ],
+    "answer": "D",
+    "language": "Python",
+    "difficulty": "Basic"
+  },
+  {
+    "question": "Which function correctly finds the factorial of a number?",
+    "options": [
+      "function factorial(n) {\n  if (n === 0 || n === 1) return 1;\n  return n * factorial(n - 1);\n}",
+      "function factorial(n) {\n  let result = 0;\n  for(let i = 1; i <= n; i++) {\n    result *= i;\n  }\n  return result;\n}",
+      "function factorial(n) {\n  let result = 1;\n  for(let i = 2; i <= n; i++) {\n    result *= i;\n  }\n  return result;\n}",
+      "function factorial(n) {\n  return Array(n).fill().map((_, i) => i + 1).reduce((acc, val) => acc * val, 1);\n}"
+    ],
+    "answer": "C",
+    "language": "JavaScript",
+    "difficulty": "Intermediate"
+  },
+  {
+    "question": "Which Java code correctly reverses a string?",
+    "options": [
+      "public String reverse(String str) {\n  return new StringBuilder(str).reverse().toString();\n}",
+      "public String reverse(String str) {\n  String reversed = \"\";\n  for (int i = str.length() - 1; i >= 0; i--) {\n    reversed += str.charAt(i);\n  }\n  return reversed;\n}",
+      "public String reverse(String str) {\n  char[] chars = str.toCharArray();\n  for (int i = 0; i < chars.length / 2; i++) {\n    char temp = chars[i];\n    chars[i] = chars[chars.length - 1 - i];\n    chars[chars.length - 1 - i] = temp;\n  }\n  return new String(chars);\n}",
+      "All of the above"
+    ],
+    "answer": "D",
+    "language": "Java",
+    "difficulty": "Basic"
+  },
+  {
+    "question": "Which function correctly finds the greatest common divisor (GCD) of two numbers?",
+    "options": [
+      "function gcd(a, b) {\n  while (b !== 0) {\n    let temp = b;\n    b = a % b;\n    a = temp;\n  }\n  return a;\n}",
+      "function gcd(a, b) {\n  if (b === 0) return a;\n  return gcd(b, a % b);\n}",
+      "function gcd(a, b) {\n  let result = 1;\n  for (let i = 1; i <= Math.min(a, b); i++) {\n    if (a % i === 0 && b % i === 0) {\n      result = i;\n    }\n  }\n  return result;\n}",
+      "All of the above"
+    ],
+    "answer": "D",
+    "language": "JavaScript",
+    "difficulty": "Intermediate"
+  },
+  {
+    "question": "Which Python function correctly checks if a string is a valid anagram of another string?",
+    "options": [
+      "def is_anagram(s1, s2):\n  return sorted(s1) == sorted(s2)",
+      "def is_anagram(s1, s2):\n  if len(s1) != len(s2):\n    return False\n  count = {}\n  for char in s1:\n    count[char] = count.get(char, 0) + 1\n  for char in s2:\n    if char not in count or count[char] == 0:\n      return False\n    count[char] -= 1\n  return True",
+      "def is_anagram(s1, s2):\n  from collections import Counter\n  return Counter(s1) == Counter(s2)",
+      "All of the above"
+    ],
+    "answer": "D",
+    "language": "Python",
+    "difficulty": "Intermediate"
+  },
+  {
+    "question": "Which C++ code correctly checks for a prime number?",
+    "options": [
+      "bool isPrime(int n) {\n  if (n <= 1) return false;\n  if (n <= 3) return true;\n  if (n % 2 == 0 || n % 3 == 0) return false;\n  for (int i = 5; i * i <= n; i += 6) {\n    if (n % i == 0 || n % (i + 2) == 0) return false;\n  }\n  return true;\n}",
+      "bool isPrime(int n) {\n  if (n <= 1) return false;\n  for (int i = 2; i < n; i++) {\n    if (n % i == 0) return false;\n  }\n  return true;\n}",
+      "bool isPrime(int n) {\n  if (n <= 1) return false;\n  for (int i = 2; i <= sqrt(n); i++) {\n    if (n % i == 0) return false;\n  }\n  return true;\n}",
+      "All of the above will correctly identify prime numbers"
+    ],
+    "answer": "C",
+    "language": "C++",
+    "difficulty": "Intermediate"
+  },
+  {
+    "question": "Which JavaScript function correctly implements binary search on a sorted array?",
+    "options": [
+      "function binarySearch(arr, target) {\n  let left = 0;\n  let right = arr.length - 1;\n  while (left <= right) {\n    const mid = Math.floor((left + right) / 2);\n    if (arr[mid] === target) return mid;\n    if (arr[mid] < target) left = mid + 1;\n    else right = mid - 1;\n  }\n  return -1;\n}",
+      "function binarySearch(arr, target) {\n  let start = 0;\n  let end = arr.length - 1;\n  while (start <= end) {\n    let mid = Math.floor((start + end) / 2);\n    if (arr[mid] === target) return mid;\n    if (target < arr[mid]) end = mid - 1;\n    else start = mid + 1;\n  }\n  return -1;\n}",
+      "function binarySearch(arr, target, start = 0, end = arr.length - 1) {\n  if (start > end) return -1;\n  const mid = Math.floor((start + end) / 2);\n  if (arr[mid] === target) return mid;\n  if (arr[mid] > target) {\n    return binarySearch(arr, target, start, mid - 1);\n  } else {\n    return binarySearch(arr, target, mid + 1, end);\n  }\n}",
+      "All of the above"
+    ],
+    "answer": "D",
+    "language": "JavaScript",
+    "difficulty": "Advanced"
+  }
+    
+]
